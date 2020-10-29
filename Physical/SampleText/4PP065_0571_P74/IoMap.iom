@@ -1,0 +1,20 @@
+VAR_CONFIG
+	Cyclic#1.gAxis01_DrvIf.iLifeCnt AT %IB."8I64xxxxxxx.00x-1".SDC_LifeCnt;
+	Cyclic#1.gAxis01_DrvIf.oSetTime AT %QW."8I64xxxxxxx.00x-1".SDC_SetTime;
+	Cyclic#1.gAxis01_DrvIf.oSetPos AT %QW."8I64xxxxxxx.00x-1".LFRD_Output;
+	Cyclic#1.gAxis01_DiDoIf.iLifeCntDriveReady AT %IB."8I64xxxxxxx.00x-1".SDC_LifeCnt;
+	Cyclic#1.gAxis01_DiDoIf.iLifeCntDriveEnable AT %IB."8I64xxxxxxx.00x-1".SDC_LifeCnt;
+	Cyclic#1.gAxis01_ModuleOk AT %IX."8I64xxxxxxx.00x-1".ModuleOk;
+	::Program:FBDoorSM.direction AT %IX."X20DI9371".DigitalInput01;
+	::Program:FBDoorSM.sw1 AT %IX."X20DI9371".DigitalInput02;
+	::Program:FBDoorSM.sw2 AT %IX."X20DI9371".DigitalInput03;
+	::Program:FBDoorSM.sw3 AT %IX."X20DI9371".DigitalInput04;
+	::Program:FBDoorSM.sw4 AT %IX."X20DI9371".DigitalInput05;
+	::Program:FBLedSM.led1 AT %QX."X20DO9322".DigitalOutput01;
+	::Program:FBLedSM.led2 AT %QX."X20DO9322".DigitalOutput02;
+	::Program:FBLedSM.led3 AT %QX."X20DO9322".DigitalOutput03;
+	::Program:FBLedSM.led4 AT %QX."X20DO9322".DigitalOutput04;
+	::Program:FBDriveSM.state AT %IW."8I64xxxxxxx.00x-1".ETAD_Input;
+	::Program:FBDriveSM.command AT %IW."8I64xxxxxxx.00x-1".ETI_Input;
+	::Program:FBDriveSM.speed AT %IW."8I64xxxxxxx.00x-1".RFRD_Input;
+END_VAR
