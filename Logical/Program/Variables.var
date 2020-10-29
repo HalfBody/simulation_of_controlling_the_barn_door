@@ -1,0 +1,5 @@
+VAR
+	FBDoorSM : FB_DoorSM := (0);
+	FBLedSM : FB_LedSM := (0);
+	FBDriveSM : FB_DriveSM := (0);
+END_VAR
