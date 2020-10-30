@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.2.10.53 SP?>
-<InitParameter Version="3.16.2" NcSwId="Acp10">
+<?AutomationStudio Version=4.5.2.102?>
+<InitParameter Version="5.2.1" NcSwId="Acp10">
   <Group ID="ACP10AXIS_typ">
     <Group ID="dig_in">
       <Group ID="level">
@@ -87,7 +87,7 @@
         </Group>
       </Group>
       <Group ID="uf">
-        <Parameter ID="type" Value="ncLINEAR" />
+        <Parameter ID="type" Value="ncLINEAR + ncCORRECTION" />
         <Parameter ID="auto_config" Value="ncMOTOR_PAR" />
         <Parameter ID="u0" Value="0" />
         <Parameter ID="un" Value="0" />
@@ -123,6 +123,7 @@
         </Group>
         <Group ID="quickstop">
           <Parameter ID="decel_ramp" Value="ncA_LIMIT" />
+          <Parameter ID="t_jolt" Value="0" />
         </Group>
         <Group ID="drive_error">
           <Parameter ID="decel_ramp" Value="ncA_LIMIT" />
