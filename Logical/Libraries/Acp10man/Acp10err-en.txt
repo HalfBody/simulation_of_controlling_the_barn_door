@@ -45,9 +45,11 @@
        Info(UINT): minimal version
    73: Invalid R4 floating point format
    74: Parameter can only be written via channel 1 (Axis 1)
+   75: Parameter is not allowed for selected motor type
  1001: Error-FIFO overflow
  1002: Parameter outside the valid range
  1003: Parameter cannot be written while loop control is active
+ 1004: Timeout in network life sign monitor
  1005: Parameter cannot be written while a movement is active
  1006: Invalid parameter for trigger event (digital input + edge)
  1008: Master for network coupling deactivated - Encoder error
@@ -76,6 +78,7 @@
  1031: Position controller cycle time exceeded - CPU load too high
  1032: Internal bus error
        Info(UDINT): Error code
+ 1034: Value of parameter in connection with motor encoder gear not allowed
  2001: Upload of trace data not allowed: Recording active
  2003: Trace start not allowed: Recording active
  2006: Initialization of trace parameters not allowed: Recording active
@@ -223,78 +226,73 @@
        Info(UINT): Error status
  6074: 24 VDC supply: Overvoltage
        Info(REAL): Limit value
+ 6075: Initialization of load simulation failed
  7012: Encoder: Hiperface error bit
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7013: Encoder: Status message
        Info(UDINT): Status code
  7014: Encoder: CRC error during parameter transfer
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7015: Encoder: Timeout error during parameter transfer
-       Info(USINT): Slot
- 7016: Encoder: Busy error during parameter transfer
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7017: Encoder: Error while reading encoder parameter
-       Info(USINT): Slot
- 7020: OEM data: Data write error
-       Info(USINT): Slot
- 7021: Encoder: Timeout error while reading absolute position
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7022: Encoder: Initialization is active
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7023: Encoder: Parameter transfer is active
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7029: Encoder: Incremental signal amplitude too small
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7030: Encoder: Incremental signal amplitude too large
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7031: Encoder: Incremental signal amplitude too large (Disturbance)
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7032: Encoder: Incremental signal amplitude too small (Disturbance, no connection)
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7033: Encoder: Incremental position step too large
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7036: Encoder: Interface ID invalid (Check slot and Interface EEPROM data)
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7038: Encoder: Position value not synchronous with absolute value
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7039: Incremental encoder: Cable disturbance track A
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7040: Incremental encoder: Cable disturbance track B
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7041: Incremental encoder: Cable disturbance track R
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7042: Incremental encoder: Edge distance of quadrature signal too small
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7043: Encoder: Cable disturbance track D
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7044: Encoder: Parity
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7045: Resolver: Signal disturbance (plausibility check)
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7046: Resolver: Cable disturbance
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7047: Invalid distance of reference marks
        Info(DINT): Distance
  7048: Error during the reading of encoder memory
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7049: Abnormal encoder current consumption
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7050: Incremental encoder: Illegal AB signal change
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7051: Encoder: Acceleration too large (Disturbance)
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7052: Encoder: Encoder is not Supported
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7053: Encoder: Power failure
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7054: Encoder: Position in channel already defined
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7055: Encoder: Invalid content type 'frame end'
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7057: Encoder: Register read/write forbidden or not implemented
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7058: Encoder: Alarm bit is set
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7059: Virtual Encoder: Error state
        Info(UDINT): PARID_ENCOD0_STATUS
  7060: Virtual Encoder: Transition error
@@ -302,45 +300,49 @@
  7061: Virtual Encoder: stall detection
        Info(UDINT): PARID_ENCOD0_STATUS
  7062: Encoder: SMC module not ready
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7063: Encoder: Error in the UART communication
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7064: Encoder: Error in the SMC communication
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7065: Encoder: Encod type invalid
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7066: Encoder: Encoder not ready
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7067: EnDat encoder: SMC modul not in operational state
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7068: Encoder: Maximum cycle time exceeded
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7069: Encoder: encoder error filter activ
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7070: Encoder: Lag error stop limit exceeded
        Info(REAL): Current lag error
  7071: Encoder: Limit speed error exceeded
        Info(REAL): Speed error
  7072: Encoder: Transfer time position exceeded
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7073: Encoder: Multiturn failure
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7074: Encoder: SafeMOTION error
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7075: Encoder: Incorrect configuration encoder type
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7076: Encoder: Data transfer active
        Info(UINT): Motor: Dataset index
  7077: Encoder: Encoder evaluation blocked by the SafeMOTION configuration
-       Info(USINT): Slot
+       Info(USINT): Encoder
  7078: Encoder: Intersegment communication failure
  7079: Encoder: Internal Error
        Info(UDINT): -
  7080: Encoder: Error in the encoder communication
-       Info(USINT): Slot
+       Info(USINT): Encoder
+ 7081: Encoder: Timeout during initialization
+       Info(USINT): Encoder
+ 7082: Encoder: Link to encoder disturbed
+       Info(USINT): Encoder
  7100: Parameter function not supported. (Module ?)
- 7103: Not supported interface
-       Info(UDINT): Interface
+ 7103: Incompatible interface
+       Info(UDINT): Interface + additional info
  7200: DC bus: Overvoltage
  7210: DC bus: Pre-charging: Voltage unstable 
  7211: DC bus: Voltage dip
@@ -371,8 +373,10 @@
        Info(REAL): Voltage boost factor
  7229: Chopper: Overcurrent
  7230: DC bus: measurement site 2 out of bounds
- 7300: Digital IO: IO Configuration invalid
-       Info(UINT): Slot
+ 7300: Analog/Digital IO: IO Configuration invalid
+       Info(USINT): Slot
+ 7303: Analog/Digital IO: 24V power supply fail
+       Info(USINT): Slot
  7401: Parameter position exceeds maximum data length
  7402: Processing of parameter sequence aborted: Write error
        Info(UINT): Index of parameter
@@ -492,9 +496,12 @@
  9300: Current controller: Overcurrent
        Info(REAL): Limit
  9302: Current controller: Cycle time invalid
+ 9303: Infeed: Summation current: Overcurrent
+       Info(REAL): Limit
 10000: Identification parameter(s) missing
 10001: Parameter identification: Invalid sub-mode
 10100: Parameter identification: Quality factor not fulfilled
+       Info(UINT): Detail
 10101: No ISQ-filter free
 10102: No resonance-frequency for ISQ-filter (band-stop) found
        Info(UINT): Filter
@@ -713,11 +720,11 @@
        Info(UINT): PLCopen_FB
 31201: Di/Do Interface: Drive not ready
 31220: Encoder error: Encoder not configured
-       Info(UINT): EncIf Index
+       Info(USINT): EncIf Index
 31221: Encoder error: Cable disturbance or signal disturbance
-       Info(UINT): EncIf Index
+       Info(USINT): EncIf Index
 31224: Encoder Interface: HW Module not OK
-       Info(UINT): EncIf Index
+       Info(USINT): EncIf Index
 31240: Homing procedure mode not allowed with current HW Type
 31247: Drive Interface: DrvOK not set from HW Module
 31248: Trigger Interface: HW Module not OK
@@ -1137,6 +1144,7 @@
        Info(UDINT): Maximum number
 32330: Setup: Data of an ACOPOS parameter longer than 6 bytes
        Info(UINT): Parameter ID
+32396: Changing the cycle time is not allowed for this ACOPOS hardware type
 32397: NCSYS version on the target system is not compatible with NCMAN version
 32398: acp10sys does not contain an operating system for this ACOPOS hardware type
 32399: Manual ACOPOS restart (POWER-OFF/-ON) after NCSYS download necessary
@@ -1279,7 +1287,8 @@
 35010: SMC FS: Internal error, Axis index out of range
        Info(UDINT): Pointer ID
 35011: SMC FS: Internal error, Function parameter out of range
-       Info(UDINT): 
+       Info(UDINT): Program counter (PC)
+35012: SMC FS: Unsafe encoder connected
 35016: SMC FS: Internal error, Cross communication of checkpoints
        Info(UDINT): Checkpoint ID
 35017: SMC FS: Internal error, Cross communication of status word
@@ -1424,6 +1433,7 @@
 35127: SMC FS: Internal error, Invalid current sensor measurement offset
 35128: SMC FS: Internal error, Sigma delta conversion is not plausible
 35129: SMC FS: Internal error, gain and offset corrected current out of range
+35130: SMC FS: Internal error, testcase
 35150: SMC FS: Additional safety parameters: Disbld. function enable bit is set
        Info(UDINT): Additional info
 35151: SMC FS: Additional safety parameters: Placeholder enable bit is set
@@ -1548,7 +1558,7 @@
        Info(UDINT): Additional info
 35246: SMC: Encoder - Initialization error
        Info(UDINT): Additional info
-35247: SMC: Encoder - Debug information
+35247: SMC: Debug information
        Info(UDINT): Additional info
 35248: SMC: Internal warning, Lockbit set
        Info(UDINT): Lockbits
@@ -1564,6 +1574,9 @@
 35254: SMC: Encoder - Length of physical reference system too large
        Info(UDINT): Additional info
 35255: SMC FS: Encoder - Acceleration limit exceeded
+35502: SMC: UTILS - Testinterface, dummy logbook entry
+35503: SMC FFS: Internal error in ADC conversion
+       Info(UDINT): Additional info
 35504: SMC FFS: RSP - Homing, INT32 overflow of S_SafePosition
        Info(UDINT): Additional info
 35506: SMC FFS: RSP - Homing, Positional change during power off too big
@@ -1603,201 +1616,215 @@
 38005: Motor test: Speed is too high during switch on
        Info(REAL): Speed limit
 38006: Current controller: Permissible current offset values exceeded
-38007: System administration: BsLoader activ: Jumper plugged
-       Info(UINT): BsLoader version
 38008: Bleeder: No current flow
 39001: Encoder: Position correction active
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39002: Resolver: Speed limit for 14 bit resolution exceeded
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39003: EnDat encoder: Alarm bit is set
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39004: EnDat encoder: Alarm bit - Lighting failure
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39005: EnDat encoder: Alarm bit - Signal amplitude too small
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39006: EnDat encoder: Alarm bit - Position value contains an error
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39007: EnDat encoder: Alarm bit - Overvoltage
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39008: EnDat encoder: Alarm bit - Undervoltage
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39009: EnDat encoder: Alarm bit - Overcurrent
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39010: EnDat encoder: Alarm bit - Battery change required
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39011: EnDat encoder: Warning bit - Frequency too high
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39012: EnDat encoder: Warning bit - Temperature too high
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39013: EnDat encoder: Warning bit - Lighting reserve reached
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39014: EnDat encoder: Warning bit - Battery charge too low
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39015: EnDat encoder: Warning bit - Reference point not reached
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39016: Incremental encoder emulation: Frequency too high
-       Info(UINT): Slot
+       Info(USINT): Encoder
 39017: Encoder: CRC error while reading position
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39018: Reference pulse monitoring: Faulty position, resolution, or reference pulse
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39019: Serial encoder interface: Stop bit error
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39020: Serial encoder interface: Receive data overrun
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39021: Serial encoder interface: Send data error
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39022: EnDat encoder: Warning bit is set
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39023: EnDat encoder: CRC error while reading EnDat2.2 additional information
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39024: EnDat encoder: Operating status error sources: M ALL Power down 
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39025: EnDat encoder: Operating status error sources: M Overflow / Underflow
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39026: EnDat encoder: Type 3 error while reading EnDat2.2 additional information
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39027: Encoder Emulation: 5V power supply fail
-       Info(UINT): Slot
+       Info(USINT): Encoder
 39028: Encoder: Multiturn failure
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39029: Encoder: Battery charge too low
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39030: Encoder: Warning bit is set
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39032: EnDat encoder: Operating status error sources: Lighting
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39033: EnDat encoder: Operating status error sources: Signal amplitude
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39034: EnDat encoder: Operating status error sources: S Pos 1
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39035: EnDat encoder: Operating status error sources: Overvoltage
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39036: EnDat encoder: Operating status error sources: Undervoltage
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39037: EnDat encoder: Operating status error sources: over current
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39038: EnDat encoder: Operating status error sources: Temperature exceeded
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39039: EnDat encoder: Operating status error sources: S Pos 
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39040: EnDat encoder: Operating status error sources: S sytem
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39041: EnDat encoder: Operating status error sources: S ALL power down
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39042: EnDat encoder: Operating status error sources: M Pos 1
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39043: EnDat encoder: Operating status error sources: M Pos 2
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39044: EnDat encoder: Operating status error sources: M System
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39045: EnDat encoder: Operating status error sources: M battery
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39046: Encoder: Incorrect encoder address acknowledgment
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39047: Encoder: Position value not synchronous with absolute value
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39048: Encoder: Incorrect command code acknowledgment
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39049: Encoder: Timeout during parameter transfer
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39050: Encoder: Parity
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39051: Encoder: Hiperface error bit
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39052: Encoder: Measurement range exceeded
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39053: Encoder: Internal check of the encoder interface failed
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39054: Encoder: Invalid supply voltage
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39055: Encoder: Incremental signal amplitude too small
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39056: Encoder: Incremental signal amplitude too large
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39059: Encoder: Status message
        Info(UDINT): Status code
 39060: Encoder: Sync bit error
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39061: Encoder: UART Transmission error
+       Info(USINT): Encoder
+39301: Analog/Digital IO: 24V power supply fail
        Info(USINT): Slot
-39301: Digital IO: 24V power supply fail
-       Info(UINT): Slot
 39302: Digital IO 1-4: Diagnose bit active (current, 24V supply)
-       Info(UINT): Slot
+       Info(USINT): Slot
 39303: Digital IO 5-8: Diagnose bit active (current, 24V supply)
-       Info(UINT): Slot
+       Info(USINT): Slot
 39305: Digital IO 10: Diagnose bit active (current, temperature)
-       Info(UINT): Slot
+       Info(USINT): Slot
 39306: Digital IO 9: Diagnose bit active (current, temperature)
-       Info(UINT): Slot
-39307: Digital IO: outputs deactivated by output mask after network error
-       Info(UINT): Slot
+       Info(USINT): Slot
+39307: Digital IO: Outputs deactivated by output mask after network error
+       Info(USINT): Slot
+39308: Analog/Digital IO: Diagnose bit active
+       Info(USINT): Slot
+39309: Digital IO: Diagnose bit active
+       Info(UINT): Digital IOs
+39310: Analog IO: Diagnose bit active
+       Info(UDINT): Additional information
+39311: Analog IO: Analog input disturbed
+       Info(USINT): Slot
+39312: Analog IO: Analog value too small
+       Info(USINT): Analog IO
+39313: Analog IO: Analog value too large
+       Info(USINT): Analog IO
+39314: Analog IO: Wire break or analog value below the measuring range
+       Info(USINT): Analog IO
+39315: Analog IO: Wire break or analog value above the measuring range
+       Info(USINT): Analog IO
 39500: Encoder: HIPERFACE: Status: Incorrect alignment data (01h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39501: Encoder: HIPERFACE: Status: Sensor not adjusted or in adjustment mode (20h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39502: Encoder: HIPERFACE: Status: Distance measure/sensor too high (21h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39504: Encoder: HIPERFACE: Status: Linear position fault (23h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39510: Encoder: HIPERFACE: Status: The encoder has not detected any faults (00h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39511: Encoder: HIPERFACE: Status: Analog signals outside specification (01h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39512: Encoder: HIPERFACE: Status: Incorrect internal angular offset (02h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39513: Encoder: HIPERFACE: Status: Data field partitioning table destroyed (03h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39514: Encoder: HIPERFACE: Status: Analog limit values not available (04h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39515: Encoder: HIPERFACE: Status: Internal I²C bus not operational (05h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39516: Encoder: HIPERFACE: Status: Internal checksum error (06h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39517: Encoder: HIPERFACE: Status: Program watchdog fault (07h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39518: Encoder: HIPERFACE: Status: Counter overflow (08h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39519: Encoder: HIPERFACE: Status: Parity error (09h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39520: Encoder: HIPERFACE: Status: Checksum error (0Ah)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39521: Encoder: HIPERFACE: Status: Unknown command (0Bh)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39522: Encoder: HIPERFACE: Status: Wrong command length (0Ch)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39523: Encoder: HIPERFACE: Status: Wrong command argument (0Dh)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39524: Encoder: HIPERFACE: Status: Read-only data field (0Eh)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39525: Encoder: HIPERFACE: Status: Incorrect access code (0Fh)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39526: Encoder: HIPERFACE: Status: Out of memory fault (10h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39527: Encoder: HIPERFACE: Status: Wrong data field offset (11h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39528: Encoder: HIPERFACE: Status: Wrong data field number (12h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39538: Encoder: HIPERFACE: Status: Value monitoring analog signals (1Ch)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39539: Encoder: HIPERFACE: Status: Transmitter current critical (1Dh)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39540: Encoder: HIPERFACE: Status: Encoder temperature critical (1Eh)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39541: Encoder: HIPERFACE: Status: Speed too high (1Fh)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39542: Encoder: HIPERFACE: Status: Singleturn position unreliable (20h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39543: Encoder: HIPERFACE: Status: Multiturn amplitude fault (21h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39544: Encoder: HIPERFACE: Status: Multiturn sync fault (22h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39545: Encoder: HIPERFACE: Status: Multiturn vectorlength fault (23h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 39546: Encoder: HIPERFACE: Status: Multiturn counter fault (24h)
-       Info(USINT): Slot
+       Info(USINT): Encoder
 41001: Heatsink temperature sensor: Warning limit exceeded
        Info(REAL): Heatsink temperature
 41002: Heatsink temperature sensor: Not connected or damaged
@@ -1863,4 +1890,8 @@
 64011: Timeout for completion of encoder initialization
 64012: acp10sys does not contain an operating system for this ACOPOS hardware type
 64013: The basis initialization was aborted due to an error
+64014: No integral cycle time ratio between NetCyc and POWERLINK
+       Info(UDINT): NetCyc cycle time [usec]
+64015: No integral cycle time ratio between NetCyc and POWERLINK "multiplexed"
+       Info(UDINT): NetCyc cycle time [usec]
 65535: Response error

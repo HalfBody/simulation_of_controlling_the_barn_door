@@ -34,6 +34,7 @@ extern "C"
  #define mcUPDATE_PERIOD 32768U
  #define mcUNEQUAL 5U
  #define mcTUNE_V_CONSTANT 1U
+ #define mcTUNE_TN 16U
  #define mcTUNE_STANDSTILL 0U
  #define mcTRANSITION_ON 1U
  #define mcTRANSITION_OFF 0U
@@ -231,6 +232,7 @@ extern "C"
  #define mcDISTANCE_BASED 0U
  #define mcDIR_INDEPENDENT_SPEED 4U
  #define mcDIR_INDEPENDENT 3U
+ #define mcDIR_DEPENDENT_SET_POSITION 5U
  #define mcDIR_DEPENDENT_BACKLASH 2U
  #define mcDIR_DEPENDENT 1U
  #define mcDIRECT 7U
@@ -312,6 +314,7 @@ extern "C"
  _GLOBAL_CONST unsigned short mcUPDATE_PERIOD;
  _GLOBAL_CONST unsigned short mcUNEQUAL;
  _GLOBAL_CONST unsigned char mcTUNE_V_CONSTANT;
+ _GLOBAL_CONST unsigned short mcTUNE_TN;
  _GLOBAL_CONST unsigned char mcTUNE_STANDSTILL;
  _GLOBAL_CONST unsigned short mcTRANSITION_ON;
  _GLOBAL_CONST unsigned short mcTRANSITION_OFF;
@@ -509,6 +512,7 @@ extern "C"
  _GLOBAL_CONST unsigned short mcDISTANCE_BASED;
  _GLOBAL_CONST unsigned short mcDIR_INDEPENDENT_SPEED;
  _GLOBAL_CONST unsigned short mcDIR_INDEPENDENT;
+ _GLOBAL_CONST unsigned short mcDIR_DEPENDENT_SET_POSITION;
  _GLOBAL_CONST unsigned short mcDIR_DEPENDENT_BACKLASH;
  _GLOBAL_CONST unsigned short mcDIR_DEPENDENT;
  _GLOBAL_CONST unsigned char mcDIRECT;
@@ -778,6 +782,7 @@ typedef struct MC_BR_TRIGGER_REF
 	float MinWidth;
 	float MaxWidth;
 	signed long SensorDelay;
+	plcbit DisableWidthEvaluationAtStart;
 } MC_BR_TRIGGER_REF;
 
 typedef struct MC_CALC_CAM_CONFIG_REF
@@ -929,6 +934,7 @@ typedef struct MC_ADVANCED_MOVE_CYC_REF
 	unsigned short AdditiveParID;
 	plcbit DisableJoltTime;
 	plcbit CoordinatedMovement;
+	plcbit DisableJoltTimeAtEnd;
 } MC_ADVANCED_MOVE_CYC_REF;
 
 typedef struct MC_NETTRACE_REF

@@ -57,6 +57,7 @@ VAR CONSTANT
 	mcDIRECT : USINT := 7; (*start mode*)
 	mcDIR_DEPENDENT : UINT := 1; (*mode for MPDC*)
 	mcDIR_DEPENDENT_BACKLASH : UINT := 2; (*mode for MPDC*)
+	mcDIR_DEPENDENT_SET_POSITION : UINT := 5; (*mode for MPDC*)
 	mcDIR_INDEPENDENT : UINT := 3; (*mode for MPDC*)
 	mcDIR_INDEPENDENT_SPEED : UINT := 4; (*mode for MPDC*)
 	mcDISTANCE_BASED : UINT := 0; (*basis for cam movement (e.g. for MC_BR_CamTransition)*)
@@ -254,6 +255,7 @@ VAR CONSTANT
 	mcTRANSITION_OFF : UINT := 0;
 	mcTRANSITION_ON : UINT := 1;
 	mcTUNE_STANDSTILL : USINT := 0; (*constant for OperatingPoint*)
+    mcTUNE_TN : UINT := 16; (*setup mode*)
 	mcTUNE_V_CONSTANT : USINT := 1; (*constant for OperatingPoint*)
 	mcUNEQUAL : UINT := 5;
 	mcUPDATE_PERIOD : UINT := 16#8000; (*input for MC_BR_TouchProbe*)

@@ -1,17 +1,8 @@
-/****************************************************************************
-*                    B & R   P O S I T I O N I N G                          *
-*****************************************************************************
-*                                                                           *
-*            Header File for Library ACP10MAN (Version 3162)                * 
-*                                                                           *
-**************************** COPYRIGHT (C) **********************************
-*     THIS SOFTWARE IS THE PROPERTY OF B&R AUSTRIA: ALL RIGHTS RESERVED.    *
-*     NO PART OF THIS SOFTWARE MAY BE USED OR COPIED IN ANY WAY WITHOUT     *
-*              THE PRIOR WRITTEN PERMISSION OF B&R AUSTRIA.                 *
-****************************************************************************/
+/* acp10man.h V5.02.1 */ 
+/* COPYRIGHT (C) B&R Industrial Automation GmbH */ 
 
 #ifndef ACP10MAN_H_VERSION 
-#define ACP10MAN_H_VERSION 0x3162 
+#define ACP10MAN_H_VERSION 0x5021 
 
 #include <ncglobal.h>
 #include <acp10par.h>
@@ -48,13 +39,13 @@ typedef struct ACP10OBINF_typ {               /* NC Object Information */
    ACP10OBIHW_typ     hardware;               /* Hardware information */
 } ACP10OBINF_typ;
 
-typedef struct ACP10SIMM1_typ {               /* Masse1 */
+typedef struct ACP10SIMM1_typ {               /* Mass1 */
    REAL               inertia;                /* Mass moment of inertia */
    REAL               static_friction;        /* Static friction */
    REAL               viscous_friction;       /* Viscous friction */
 } ACP10SIMM1_typ;
 
-typedef struct ACP10SIMM2_typ {               /* Masse2 */
+typedef struct ACP10SIMM2_typ {               /* Mass2 */
    REAL               inertia;                /* Mass moment of inertia */
    REAL               static_friction;        /* Static friction */
    REAL               viscous_friction;       /* Viscous friction */
@@ -62,11 +53,20 @@ typedef struct ACP10SIMM2_typ {               /* Masse2 */
    REAL               damping;                /* Damping of coupling */
 } ACP10SIMM2_typ;
 
+typedef struct ACP10SIMGB_typ {               /* Gearbox */
+   USINT              direction;              /* Direction */
+   USINT              reserve1;               /* Reserved */
+   UINT               reserve2;               /* Reserved */
+   UDINT              in_rev;                 /* Input revolutions */
+   UDINT              out_rev;                /* Output revolutions */
+} ACP10SIMGB_typ;
+
 typedef struct ACP10SIMPA_typ {               /* Parameters */
    UINT               mode;                   /* Mode */
    UINT               add_load_par_id;        /* Parameter ID for additive load */
    ACP10SIMM1_typ     mass1;                  /* Mass1 */
    ACP10SIMM2_typ     mass2;                  /* Mass2 */
+   ACP10SIMGB_typ     gear;                   /* Gearbox */
 } ACP10SIMPA_typ;
 
 typedef struct ACP10SIM_typ {                 /* Simulation mode */
@@ -310,6 +310,7 @@ typedef struct ACP10AXSTQ_typ {               /* Quickstop */
    USINT              decel_ramp;             /* Deceleration ramp */
    USINT              reserve1;               /* Reserved */
    UINT               reserve2;               /* Reserved */
+   REAL               t_jolt;                 /* Jolt time */
 } ACP10AXSTQ_typ;
 
 typedef struct ACP10AXSTD_typ {               /* Drive error */
@@ -852,7 +853,9 @@ typedef struct ACP10PRADR_typ {               /* Parameter record for format "nc
 
 typedef struct ACP10PRB06_typ {               /* Parameter record for format "ncFORMAT_B06" */
    UINT               par_id;                 /* Parameter ID */
+   UINT               reserve1;               /* Reserved */
    USINT              data_byte[6];           /* Data bytes */
+   UINT               reserve2;               /* Reserved */
 } ACP10PRB06_typ;
 
 typedef struct ACP10PRT10_typ {               /* Parameter record for format "ncFORMAT_T10" */
@@ -1255,6 +1258,7 @@ typedef struct ACP10VASTQ_typ {               /* Quickstop */
    USINT              decel_ramp;             /* Deceleration ramp */
    USINT              reserve1;               /* Reserved */
    UINT               reserve2;               /* Reserved */
+   REAL               t_jolt;                 /* Jolt time */
 } ACP10VASTQ_typ;
 
 typedef struct ACP10VASTD_typ {               /* Drive error */

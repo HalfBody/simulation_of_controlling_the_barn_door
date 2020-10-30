@@ -1,12 +1,12 @@
-    1: Leistungsteil: Identifikation
-    2: Leistungsteil: Identifikation (Intern)
-    3: Steuerungsteil: Identifikation (Intern)
+    1: INTERNAL1
+    2: INTERNAL2
+    3: INTERNAL3
     4: SafeMC: Status
     5: SafeMC: Control
     6: SafeMC: Istdrehzahl 
     7: SafeMC: Drehzahlgrenzwert
     8: Motor-Haltebremse: Status
-    9: Simulierte Rotorwinkelposition
+    9: INTERNAL9
    10: Bremswiderstand: Extern: Widerstand
    11: Bremswiderstand: Extern: Grenztemperatur
    12: Bremswiderstand: Extern: Thermischer Widerstand
@@ -32,7 +32,7 @@
    36: Geber2: Serieller Status
    37: Geber3: Serieller Datenblock
    38: Geber3: Serieller Status
-   39: Geber1: Geber-Maßstab: Bezugslänge (Testparameter)
+   39: INTERNAL39
    40: Motor: Bestellbezeichnung
    41: Motor: Seriennummer
    42: Motor-Haltebremse: Nennstrom
@@ -76,8 +76,8 @@
    80: Netzversorgung: Phasenausfall ignorieren
    81: Motor: Kommando
    82: Geber1: Status
-   83: Slot: Betriebszustand
-   84: Motor: Datensatz-Status
+   83: INTERNAL83
+   84: Motor: Geber-Datenübertragung: Status
    85: Geber2: Typ
    86: Motor-Haltebremse: Kommando
    87: CTRL Vorsteuerung: Drehmoment in positiver Richtung
@@ -129,7 +129,7 @@
   135: Trace: Parameter-ID für Test-Datum
   136: Trace: Datentyp für Test-Datum
   137: Trace: Kommando
-  138: Prozessor-Zyklen niederpriore SW
+  138: INTERNAL138
   139: Diagnose: Spitzenwert CPU Rechenzeit pro Zyklus
   140: Trace: Index für Test-Datum
   141: Trace: Aufzeichnungsdauer
@@ -139,8 +139,8 @@
   145: CTRL Regler: Modus der Reglerkaskaden-Zykluszeiten
   146: CTRL Lageregler: Parameter-ID für zyklische Sollposition
   147: CTRL Lageregler: Bewegung mit zyklischer Positionsvorgabe starten
-  148: Meldungen: Erweiterter Fehlersatz vom Antrieb
-  149: Meldungen: Achs-Index
+  148: INTERNAL148
+  149: INTERNAL149
   150: Grenzwerte: Wartezeit vor Meldung 'Zielposition erreicht'
   151: Referenzieren: Referenzimpuls-Distanz
   152: Referenzieren: Referenzposition
@@ -168,7 +168,7 @@
   174: Bewegungsabbruch: Bremsrampe
   175: Bewegungsabbruch: Reglerzustand nach Bewegungsabbruch
   176: Bewegungsabbruch: Kommando Bewegung abbrechen
-  177: Interner Test-Parameter für Entwicklung
+  177: INTERNAL177
   178: Status: Allgemeine Bits
   179: Status: Zyklische Bits
   180: Meldungen: Fehlernummer
@@ -177,22 +177,22 @@
   184: Digitale Eingänge: Force-Freigabe-Bits
   185: Digitale Eingänge: Force-Funktion
   186: Digitale Eingänge: Aktiv-Pegel-Bits
-  187: Prozessor-Zyklen Interrupt-SW
-  188: Spitzenwert Prozessor-Zyklen Interrupt-SW
+  187: INTERNAL187
+  188: INTERNAL188
   189: Zeit für Netzwerk-Lebensüberwachung
   191: Basis-Bewegungen: Anhalten
   194: Kurvenautomat: Parameter rücksetzen
   195: VAX Kurvenautomat: Parameter rücksetzen
-  196: Antriebs-Synchronisation: Offset Masterzeit
+  196: INTERNAL196
   197: Bewegungsabbruch: Bremsrampe nach Antriebsfehler
   198: Zyklische Kommunikation: Zeit für Lebensüberwachung der Daten zum Antrieb
-  200: Systemverwaltung: Modul: Löschen
-  201: Systemverwaltung: Modul: Parameter-ID
-  202: Systemverwaltung: Modul: Befehls-Sicherungs-Code
+  200: INTERNAL200
+  201: INTERNAL201
+  202: INTERNAL202
   203: Geber1: Resolver Polpaare pro Geberumdrehung
   204: Geber2: Resolver Polpaare pro Geberumdrehung
-  205: Leistungsteil: Phase 1: AD-Wandlerwert
-  206: Leistungsteil: Phase 2: AD-Wandlerwert
+  205: INTERNAL205
+  206: INTERNAL206
   207: Zyklische Kommunikation: Parameter-ID der Daten zum Antrieb
   209: Wechselrichter: Phase 1: Strom
   210: Wechselrichter: Phase 2: Strom
@@ -200,12 +200,12 @@
   212: Geber1: Diagnosewert 1
   213: CTRL Strom: Sollstatorstrom Querkomponente
   214: CTRL Strom: Iststatorstrom Querkomponente
-  215: CTRL Strom: ISQ Integratorwert
+  215: INTERNAL215
   216: CTRL Strom: Statorspannung Querkomponente
-  217: CTRL Strom: EMK_Vorsteuerung
+  217: INTERNAL217
   218: CTRL Strom: Sollstatorstrom Hauptkomponente
   219: CTRL Strom: Iststatorstrom Hauptkomponente
-  220: CTRL Strom: ISD Integratorwert
+  220: INTERNAL220
   221: CTRL Strom: Statorspannung Hauptkomponente
   222: Flussregler: Stellgröße der Statorstromhauptkomponente
   223: CTRL Strom: Proportional-Verstärkung
@@ -235,9 +235,9 @@
   249: CTRL Momentbegrenzer: Maximales Beschleunigungsmoment in negative Richtung
   250: CTRL Drehzahl: Solldrehzahl
   251: CTRL Drehzahl: Istdrehzahl
-  252: CTRL Drehzahl: Integratorwert
+  252: INTERNAL252
   253: CTRL Drehzahl: Proportional-Verstärkung
-  254: CTRL Drehzahl: Integrator-Faktor
+  254: INTERNAL254
   255: CTRL Drehzahl: Integrator-Nachstellzeit
   256: CTRL Drehzahl: Stellgröße
   257: CTRL Fluss: Sollwert Magnetisierungsstrom
@@ -246,23 +246,23 @@
   260: CTRL Fluss: Integrierzeitkonstante
   261: CTRL Zwischenkreis: Parameter-ID additiver Wirkstrom
   262: Netzversorgung: Mode
-  263: Geber1: Anzahl der Positionskorreturen
-  264: Geber2: Anzahl der Positionskorreturen
-  265: Geber3: Anzahl der Positionskorreturen
-  266: Geber1: aktuelle Beschleunigung
-  267: Geber2: aktuelle Beschleunigung
-  268: Geber3: aktuelle Beschleunigung
-  269: Geber1: maximal Beschleunigung
-  270: Geber2: maximal Beschleunigung
-  271: Geber3: maximal Beschleunigung
-  272: Geber1: maximal zulässige Beschleunigung
-  273: Geber2: maximal zulässige Beschleunigung
-  274: Geber3: maximal zulässige Beschleunigung
+  263: INTERNAL263
+  264: INTERNAL264
+  265: INTERNAL265
+  266: INTERNAL266
+  267: INTERNAL267
+  268: INTERNAL268
+  269: INTERNAL269
+  270: INTERNAL270
+  271: INTERNAL271
+  272: INTERNAL272
+  273: INTERNAL273
+  274: INTERNAL274
   275: Motor: Einphasen: Strom
   276: Motor: Einphasen: Modus
   277: Motor: Drehmoment
   278: Motor: Leistung
-  279: Manueller Sollwert des Statorstrom Hauptkomponente
+  279: INTERNAL279
   280: Geber1: Getriebeübersetzung Motorumdrehungen
   281: CTRL Vorsteuerung: Sollstatorstrom
   282: CTRL Vorsteuerung: Parameter-ID Lastdrehmoment
@@ -280,10 +280,11 @@
   301: CTRL Vorsteuerung: Massenträgheitsmoment
   302: CTRL Zwischenkreis: Gefilterte Spannung
   303: Geber1: ADC1 Wert
-  304: Fehlerstatus des Vektorreglers
-  305: CTRL Chopper: PWM-Tastverhältnis
-  307: Maximale Motordrehzahl
-  308: Maximale Statorquerstromkomponente (Begrenzung: IS_MAX)
+  304: INTERNAL304
+  305: INTERNAL305
+  306: Funktions-Block: Konstante Minimalwert 2Byte Vorzeichenbehaftet
+  307: INTERNAL307
+  308: INTERNAL308
   309: SafeMC: Istposition
   310: Funktions-Block: Konstante Eins
   311: ENABLE: Konfiguration
@@ -291,22 +292,24 @@
   313: CTRL Drehzahl: Überwachung: Grenzdrehzahl
   314: CTRL Chopper: Minimales PWM-Tastverhältnis
   315: Wechselrichter: Sperrschicht-Temperaturmodell: Verlustleistung
-  317: Kommando: Drehfeldregelung mit Statorspannungsvorgabe ein-/ausschalten
-  318: Kommando: Drehfehlregelung mit Statorstromvorgabe ein-/ausschalten
-  319: Kommando: Sollwertgenerator für unterlagerte Regler ein-/ausschalten
-  320: Kommando: Momentenregelung ein-/ausschalten
-  321: Sollwert der Statorquerspannungkomponente für Inbetriebnahme
-  322: Sollwert der Statorflusswinkeländerung pro Abtastung für Inbetriebnahme
+  317: INTERNAL317
+  318: INTERNAL318
+  319: INTERNAL319
+  320: INTERNAL320
+  321: INTERNAL321
+  322: INTERNAL322
   323: Motor-Haltebremse: Maximaler Positionsfehler
-  324: Manueller Sollwert des Statorquerstrom
+  324: INTERNAL324
   325: CTRL Strom: Parameter-ID des additiven Sollwerts
-  326: Amplitude des Statorquerstroms für Rechteckgenerator
-  327: Offset des Statorquerstroms für Rechteckgenerator
+  326: INTERNAL326
+  327: INTERNAL327
   328: CTRL Regler: Modus
-  332: Einschaltzeit (maximale Amplitude des Rechteckimpulses)
-  333: Ausschaltzeit (minimale Amplitude des Rechteckimpulses)
+  330: INTERNAL330
+  331: INTERNAL331
+  332: INTERNAL332
+  333: INTERNAL333
   334: Motor: Einphasen: Kommando
-  335: Relais Zustand
+  335: INTERNAL335
   336: Geber1: Fehler Status
   337: Geber2: Fehler Status
   338: Geber3: Fehler Status
@@ -322,17 +325,13 @@
   350: Rotorflusswinkel
   351: Netzversorgung: Verhalten bei Fehler
   352: Motor: Temperaturmodell: Maximale Last
-  353: Wechselrichter: Überstrom Erdschluss: Zähler
-  354: Schlupfwinkelgeschwindigkeit
+  353: INTERNAL353
+  354: INTERNAL354
   355: Antriebs-Synchronisation: Gesamtzeit
-  358: Digital IO: Status
   359: Antriebs-Synchronisation: Abweichung von Masterzeit
-  360: Digital IO: Konfigurierung
-  361: Kommando: Digitale Ausgänge setzen
-  362: Kommando: Digitale Ausgänge löschen
-  364: Testvariable (Änderung der Zwischenkreisspannung)
-  365: Leistungsteil: Kühler-Temperatursensor: AD-Wandlerwert
-  366: Temperatursensor: AD-Wandlerwert
+  364: INTERNAL364
+  365: INTERNAL365
+  366: INTERNAL366
   367: Netzversorgung: Status
   368: CTRL Zwischenkreis: Begrenzer: Modus
   369: Geber1: INK Referenzimpuls-Status
@@ -342,7 +341,7 @@
   373: Motor: Temperaturmodell: Modus
   374: CTRL Momentbegrenzer: LIM_T2_POS-Override
   375: CTRL Momentbegrenzer: LIM_T2_NEG-Override
-  376: Status der Temperaturüberwachung
+  376: INTERNAL376
   377: Wechselrichter: Dauerstrom: Last
   378: Wechselrichter: Dauerstrom: Maximale Last
   379: Wechselrichter: Spitzenstrom: Last
@@ -362,10 +361,10 @@
   393: Motor: Temperaturmodell: Temperatur
   394: Motor: Temperaturmodell: Maximale Temperatur
   395: Netzversorgung: Status Hauptrelais
-  396: Rückwertszähler der anzeigt, ob der NTC unzulässig warm ist
-  397: CTRL Zwischenkreis: Status
+  396: INTERNAL396
+  397: INTERNAL397
   398: Bremswiderstand: Wahlschalter
-  399: Kommando: Prüftechnik-Modus
+  399: INTERNAL399
   400: VAX Basis-Bewegungen: Bewegung mit absoluter Zielposition starten
   401: VAX Basis-Bewegungen: Bewegung mit relativer Verfahrdistanz starten
   402: VAX Basis-Bewegungen: Bewegung in positive Richtung starten
@@ -380,7 +379,7 @@
   411: VAX Basis-Bewegungen: Relative Verfahrdistanz
   412: VAX: Position
   413: VAX: Geschwindigkeit
-  414: Interner Test-Parameter für Entwicklung
+  414: INTERNAL414
   415: VAX Grenzwerte: Ruckzeit
   416: Basis-Bewegungen: Modus 'Stop nach Trigger'
   417: Basis-Bewegungen: Restweg für Modus 'Stop nach Trigger'
@@ -415,7 +414,7 @@
   494: Netzwerk-Kopplung: Parameter-ID der Sende-Daten Master3
   495: Kurvenautomat: Index für den Start-Zustand
   496: VAX Kurvenautomat: Index für den Start-Zustand
-  499: Interner Test-Parameter für Entwicklung
+  499: INTERNAL499
   500: Kurvenautomat: Kurvenscheiben Polynom-Daten
   501: Kurvenautomat: Index der Kurvenscheibendaten für Übertragung
   502: Kurvenautomat: Kommando
@@ -534,9 +533,9 @@
   642: VAX Basis-Bewegungen: Bewegung mit zyklischer Geschwindigkeitsvorgabe starten
   643: Basis-Bewegungen: Parameter-ID für zyklische Geschwindigkeit
   644: VAX Basis-Bewegungen: Parameter-ID für zyklische Geschwindigkeit
-  648: NCMAN: Test index
-  649: NCMAN: Test I4
-  650: NCMAN: Test R4
+  648: INTERNAL648
+  649: INTERNAL649
+  650: INTERNAL650
   651: CTRL Momentbegrenzer: Induktionshalt: Maximales Moment 
   652: Motor: Geber: Attribut
   653: CTRL U/f: Typ
@@ -555,7 +554,7 @@
   666: Geber2: INK Referenzimpuls-Abstandsfehler
   667: Geber3: INK Referenzimpuls-Abstandsfehler
   668: Motor: Umgebungstemperatur
-  669: Leistungsteil: Umgebungstemperatur
+  669: INTERNAL669
   670: Wechselrichter: Dauerleistung: Last
   671: Wechselrichter: Dauerleistung: Maximale Last
   672: Motorgeber: Last-Maßstab: Zählrichtung
@@ -575,8 +574,6 @@
   686: Geber3: INK Referenzimpuls-Intervall
   687: CTRL Drehzahl: Geschwindigkeits-Grenzwert in positive Richtung
   688: CTRL Drehzahl: Geschwindigkeits-Grenzwert in negative Richtung
-  689: CTRL Drehzahl: Verzögerung in positive Richtung
-  690: CTRL Drehzahl: Verzögerung in negative Richtung
   692: CTRL Lageregler: Stellgröße des Integrators
   693: Geber3: Istposition pro Umdrehung
   694: Geber3: Last-Maßstab: Einheiten pro Lastumdrehung
@@ -602,8 +599,8 @@
   717: CTRL Regler: Leistungsteil ausschalten
   718: Geber1: Fehlermodus
   719: Geber1: Geberkommando
-  720: Test R4 1
-  721: Test R4 2
+  720: INTERNAL720
+  721: INTERNAL721
   722: CTRL Vektor: Parameter-ID der Istposition
   723: Geber2: Serielle Auflösung pro Sinusperiode
   724: Geber3: Serielle Auflösung pro Sinusperiode
@@ -624,10 +621,10 @@
   739: Geber1: DCM Grundabstand
   740: Geber2: DCM Grundabstand
   741: Geber3: DCM Grundabstand
-  742: Systemverwaltung: Einsteckmodul ID von Slot1
-  743: Systemverwaltung: Einsteckmodul ID von Slot2
-  744: Systemverwaltung: Einsteckmodul ID von Slot3
-  745: Systemverwaltung: Einsteckmodul ID von Slot4
+  742: Systemverwaltung: Einsteckmodul: ID von Slot1
+  743: Systemverwaltung: Einsteckmodul: ID von Slot2
+  744: Systemverwaltung: Einsteckmodul: ID von Slot3
+  745: Systemverwaltung: Einsteckmodul: ID von Slot4
   746: CTRL Vorsteuerung: Lastdrehmoment
   747: CTRL Vorsteuerung: Beschleunigungsfilterzeitkonstante
   748: CTRL Zwischenkreis: Begrenzer: Obere Stromgrenze
@@ -663,11 +660,11 @@
   784: VAX Basis-Bewegungen: Beschleunigungs-Override
   787: Zyklische Kommunikation: Parameter-Index der Monitor-Daten vom Antrieb
   788: Zyklische Kommunikation: Parameter-ID der Monitor-Daten vom Antrieb
-  789: Zeit bei steigender Flanke Trigger1
-  790: Zeit bei fallender Flanke Trigger1
-  791: Zeit bei steigender Flanke Trigger2
-  792: Zeit bei fallender Flanke Trigger2
-  793: Geber2: Gefilterte Istposition Nachkommateil
+  789: Digitale Eingänge: Zeit bei steigender Flanke Trigger1
+  790: Digitale Eingänge: Zeit bei fallender Flanke Trigger1
+  791: Digitale Eingänge: Zeit bei steigender Flanke Trigger2
+  792: Digitale Eingänge: Zeit bei fallender Flanke Trigger2
+  793: INTERNAL793
   794: Digitale Eingänge: Status Enable
   795: Kurvenautomat: Parameter-ID für Multiplikationsfaktor der Slave-Achse
   796: VAX Kurvenautomat: Parameter-ID für Multiplikationsfaktor der Slave-Achse
@@ -677,19 +674,19 @@
   801: Positionsbeobachter 2: Parameter A0
   802: Positionsbeobachter 2: Parameter A1
   803: Positionsbeobachter 2: Parameter A2
-  804: RESERVED804
+  804: INTERNAL804
   805: Geberloser Betrieb: Überblendgrenze
   806: Geberloser Betrieb: Überblendbereich
-  807: RESERVED807
-  808: RESERVED808
-  809: RESERVED809
-  810: RESERVED810
-  811: Signalgenerator: Modus
-  812: Signalgenerator: Amplitude des Signales
-  813: Signal generator: Offset des Signales
-  814: Signal generator: Frequenz des Signales
-  815: Signal generator: Ausgangssignales
-  816: Signal generator: Ordnung des Pseudo-Rausch-Binär-Signales
+  807: INTERNAL807
+  808: INTERNAL808
+  809: INTERNAL809
+  810: INTERNAL810
+  811: INTERNAL811
+  812: INTERNAL812
+  813: INTERNAL813
+  814: INTERNAL814
+  815: INTERNAL815
+  816: INTERNAL816
   817: Umrichterkorrektur: Verstärkungsfaktor
   818: Umrichterkorrektur: Exponent
   819: Geber2: ADC1 Wert
@@ -727,11 +724,11 @@
   851: CTRL Zwischenkreis: Sollwert Spannung
   852: CTRL Zwischenkreis: Sollwert Strom
   853: CTRL Zwischenkreis: Parameter-ID Sollwert Spannung
-  854: CTRL U/f: Grenzstrom
-  855: CTRL Zwischenkreis: Begrenzer: Strom
-  856: Leistungsteil: Kühler-Temperatursensor: AD-Wandlerwert1
-  857: Leistungsteil: Kühler-Temperatursensor: AD-Wandlerwert2
-  858: Leistungsteil: Kühler-Temperatursensor: AD-Wandlerwert3
+  854: INTERNAL854
+  855: INTERNAL855
+  856: INTERNAL856
+  857: INTERNAL857
+  858: INTERNAL858
   859: Leistungsteil: Temperatursensor 3: Temperatur
   860: Leistungsteil: Temperatursensor 4: Temperatur
   861: Leistungsteil: Temperatursensor 1: Temperatur
@@ -751,7 +748,7 @@
   876: Bremswiderstand: Verlustleistung
   877: ISQ-Ripple Kompensation: Modus
   878: Parameter Identifikation: Geschwindigkeit
-  879: ISQ-Ripple Kompensation: Status Bits
+  879: INTERNAL879
   880: CTRL Vektor: Strom Vorsteuerzeit
   881: ISQ-Ripple Kompensation: Strom
   882: ISQ-Ripple Kompensation: Daten: Index
@@ -827,25 +824,25 @@
   952: Geber3: Resolver Übersetzungsverhältnis
   953: Geber3: Diagnosewert 1
   954: CTRL Flussschwächung: Entmagnetisierungstrom 
-  955: Geberloser Betrieb: Momentproportionaler Strom
-  956: Geberloser Betrieb: Feldproportionaler Strom
+  955: INTERNAL955
+  956: INTERNAL956
   957: CTRL U/f: Schlupfkompensation: Multiplikationsfaktor der kompensierten Frequenz
-  958: Geberloser Betrieb: Kompensationsdrehzahl 
+  958: INTERNAL958
   959: CTRL Flussschwächung: Einsatzdrehzahl Feldschwächung 
-  960: Test R4 01
-  961: Test R4 02
-  962: CTRL Flussschwächung: Spannungsobergrenze  
-  963: Parameteridentifikation: Wert des Gütefunktional
-  964: Parameteridentifikation: Identifikationschritt
-  965: Parameteridentifikation: Infonummer
-  966: Magnetisierungskennlinie: Faktor für aktuelle Hauptinduktivität
-  967: RESERVED967
-  968: RESERVED968
-  969: RESERVED969
-  970: RESERVED970
-  971: Parameter Identifikation: ungesättigte Hauptinduktivität
-  972: Parameter Identifikation: ungesättigter Magnetisierungsstrom
-  973: Parameter Identifikation: Schaltfrequenz
+  960: INTERNAL960
+  961: INTERNAL961
+  962: INTERNAL962
+  963: INTERNAL963
+  964: INTERNAL964
+  965: INTERNAL965
+  966: INTERNAL966
+  967: INTERNAL967
+  968: INTERNAL968
+  969: INTERNAL969
+  970: INTERNAL970
+  971: INTERNAL971
+  972: INTERNAL972
+  973: INTERNAL973
   974: Parameter Identifikation: Motor: Strangquerschnitt
   975: Parameter Identifikation: Motor: Type
   976: Parameter Identifikation: Motor: Polpaarzahl
@@ -866,16 +863,16 @@
   991: Parameter Identifikation: Motor: Phase
   992: Parameter Identifikation: Umrichter: Verstärkungsfaktor
   993: Parameter Identifikation: Umrichter: Exponent 
-  994: Parameter Identifikation: Motor: Statusbits
+  994: INTERNAL994
   995: Parameter Identifikation: Modus
   996: Parameter Identifikation: Status
   997: Parameter Identifikation: Kommando
   998: Parameter Identifikation: Güte der Optimierung
   999: Geber: Positions-Datenblock
- 1000: Diagnose: Datenblock
+ 1000: INTERNAL1000
  1001: Systemverwaltung: Modul: BsLoader
  1002: Systemverwaltung: Modul: NC-Betriebssystem
- 1003: Systemverwaltung: Modul: Basis-BsLoader
+ 1003: INTERNAL1003
  1004: Systemverwaltung: Parameter-Request: Bit-Offset im Datenbereich des Frames
  1005: Systemverwaltung: Parameter-Response: Bit-Offset im Datenbereich des Frames
  1006: Zyklische Kommunikation: Daten zum Antrieb: Bit-Offset im Datenbereich des Frames
@@ -939,7 +936,7 @@
  1066: VAX Bewegungsabbruch: Kommando Bewegung abbrechen
  1067: Kurvenautomat: Position der Slave-Achse
  1068: VAX Kurvenautomat: Position der Slave-Achse
- 1069: Netzwerk: Parameter-Kommando zum Antrieb
+ 1069: INTERNAL1069
  1070: Datenblock-Übertragung: Datenblocksegment schreiben
  1071: Datenblock-Übertragung: Letztes Datenblocksegment schreiben
  1072: Datenblock-Übertragung: Datenblock-Schreibzugriff abbrechen
@@ -950,35 +947,35 @@
  1077: Kurvenautomat: Relative Eintritts-Position der Master-Achse in der Kurvenscheibe
  1078: VAX Kurvenautomat: Relative Eintritts-Position der Master-Achse in der Kurvenscheibe
  1079: VAX Kurvenautomat: Meldungs-Modus-Steuerbits
- 1080: Adresse für System-Variable0
- 1081: Adresse für System-Variable1
- 1082: Adresse für System-Variable2
- 1083: Adresse für System-Variable3
- 1084: Adresse für System-Variable4
- 1085: Adresse für System-Variable5
- 1086: Adresse für System-Variable6
- 1087: Adresse für System-Variable7
- 1088: Adresse für System-Variable8
- 1089: Adresse für System-Variable9
- 1090: System-Variable0
- 1091: System-Variable1
- 1092: System-Variable2
- 1093: System-Variable3
- 1094: System-Variable4
- 1095: System-Variable5
- 1096: System-Variable6
- 1097: System-Variable7
- 1098: System-Variable8
- 1099: System-Variable9
+ 1080: INTERNAL1080
+ 1081: INTERNAL1081
+ 1082: INTERNAL1082
+ 1083: INTERNAL1083
+ 1084: INTERNAL1084
+ 1085: INTERNAL1085
+ 1086: INTERNAL1086
+ 1087: INTERNAL1087
+ 1088: INTERNAL1088
+ 1089: INTERNAL1089
+ 1090: INTERNAL1090
+ 1091: INTERNAL1091
+ 1092: INTERNAL1092
+ 1093: INTERNAL1093
+ 1094: INTERNAL1094
+ 1095: INTERNAL1095
+ 1096: INTERNAL1096
+ 1097: INTERNAL1097
+ 1098: INTERNAL1098
+ 1099: INTERNAL1099
  1100: Trace: Daten
  1101: Autotuning: Maximaler Prozentsatz für Nennstrom
  1102: Autotuning: Maximaler Prozentsatz für Geschwindigkeitsgrenzwert
  1103: Autotuning: Maximale Verfahrdistanz
  1104: Autotuning: Maximaler Schleppfehler
- 1105: Autotuning: Schritt
+ 1105: INTERNAL1105
  1106: Autotuning: Anzahl der Anregungsperioden
- 1107: Test R4 03
- 1108: Test R4 04
+ 1107: INTERNAL1107
+ 1108: INTERNAL1108
  1109: Autotuning: Geschätztes Massenträgheitsmoment des Antriebs
  1110: Autotuning: Ordnung des Anregungssignals
  1111: Autotuning: Option-Steuerbits
@@ -987,8 +984,8 @@
  1114: Autotuning: Untere Frequenz zur Schätzung des Massenträgheitsmoment des Antriebs
  1115: Autotuning: Obere Frequenz zur Schätzung des Massenträgheitsmoment des Antriebs
  1116: Autotuning: Verzögerungszeit bei transienten Vorgängen
- 1117: Signalgenerator: Startfrequenz des Chirp-Signals
- 1118: Signalgenerator: Stopfrequenz des Chirp-Signals
+ 1117: INTERNAL1117
+ 1118: INTERNAL1118
  1119: Autotuning: Maximale Proportional-Verstärkung
  1120: Autotuning: Beschleunigung
  1121: Parameter Identifikation: Startfrequenz des Anregungssignals
@@ -1003,7 +1000,7 @@
  1130: ISQ-Ripple Kompensation: Daten: Phasenwinkel für Quadrant III
  1131: ISQ-Ripple Kompensation: Referenzsystem
  1132: ISQ-Ripple Kompensation: Daten: Parameter B
- 1133: Parameter Identifikation: Position
+ 1133: INTERNAL1133
  1134: ISQ-Ripple Kompensation: Positionsoffset
  1135: Geber: Modus
  1136: Geber2: Modus
@@ -1030,11 +1027,11 @@
  1157: Temperatursensor: Widerstand
  1158: Temperatursensor: Parameter-ID Widerstand
  1159: CTRL Drehzahl: Geschwindigkeitsfehler
- 1160: SafeMC: ACP Kommunikations Sendedaten
- 1161: SafeMC: ACP Kommunikations Sendekommando
+ 1160: INTERNAL1160
+ 1161: INTERNAL1161
  1162: Wechselrichter: Anzahl der Endstufen
  1163: Grenzwerte: Geschwindigkeitsfehlerüberwachung: Modus
- 1164: Ladewiderstand: Datenpointer
+ 1164: INTERNAL1164
  1165: Leistungsbegrenzer: Grenzwert
  1166: CTRL Strom: Automatische Konfigurierung
  1167: Geber1: Diagnosewert ID
@@ -1048,14 +1045,14 @@
  1175: Geber1: Daten: Parameter A0
  1176: Geber1: Daten: Parameter A1
  1177: Geber1: Daten: Parameter A2
- 1178: CTRL CR_OK: Abschaltschwelle
+ 1178: INTERNAL1178
  1179: Bewegungsabbruch: Mindestzeit für zyklisches Bit 'Abbruch durch Antriebs-Ereignis'
  1180: CTRL Lageregler: Verzögerung in positive Richtung bei Aktivierung des Enable Eingangs
  1181: CTRL Lageregler: Verzögerung in negative Richtung bei Aktivierung des Enable Eingangs
  1182: Referenzieren: Schleppfehler für Abbruch einer Bewegung
  1183: Netzwerk-Kopplung: Empfangs-Datenpunkt: Zykluszeit
  1184: Referenzieren: Modus zum Speichern und Wiederherstellen von Positions-Daten
- 1185: Basis-Bewegungen: Bewegung mit Zielposition und Verzögerungs-Anpassung starten
+ 1185: INTERNAL1185
  1186: Basis-Bewegungen: Profilgenerator Sollposition
  1187: Basis-Bewegungen: Profilgenerator Sollpositionsänderung pro Zyklus
  1188: Referenzieren: Schleppfehler für Block-Erkennung
@@ -1082,8 +1079,8 @@
  1214: Motor: Temperaturmodell: Thermische Kapazität 2
  1215: Temperatursensor: Typ
  1216: Temperatursensor: Grenztemperatur
- 1217: Motor: Temperaturmodell: Temperatur 13
- 1218: Motor: Temperaturmodell: Temperatur 2
+ 1217: INTERNAL1217
+ 1218: INTERNAL1218
  1219: Geber: Index für Positions-Datenblock
  1220: CTRL Zwischenkreis: Überspannungsüberwachung: Schwelle für Momentabschaltung
  1221: CTRL Zwischenkreis: Überspannungsüberwachung: Schwelle für Stillsetzung
@@ -1094,7 +1091,7 @@
  1226: Geber2: Phasenlage der seriellen Position
  1227: Geber3: Phasenlage der seriellen Position
  1228: Geber1: Serielle Auflösung pro Sinusperiode
- 1229: CTRL Drehzahl: Zykluszeit
+ 1229: INTERNAL1229
  1230: Geber1: Kompensation: Parameter 1
  1231: Geber1: Kompensation: Parameter 2
  1232: Geber1: Kompensation: Parameter 3
@@ -1114,48 +1111,48 @@
  1246: CTRL Drehzahl: Repetitive Control: Parameter 1
  1247: CTRL Drehzahl: Repetitive Control: Parameter 2
  1248: CTRL Drehzahl: Repetitive Control: Modus
- 1249: CTRL Vorsteuerung: Sollmotorkraft
+ 1249: INTERNAL1249
  1250: CTRL Flussschwächung: Spannungsgrenze Reserve
- 1251: CTRL Flussschwächung: PI-Regler P-Verstärkung
- 1252: MAINSSIM_UCTRL_TD
- 1253: FWCTRL Test R4 01
- 1254: FWCTRL Test R4 02
- 1255: FWCTRL Test R4 03
- 1256: FWCTRL Test Faktor 1
- 1257: FWCTRL Test Faktor 2
- 1258: MAINSSIM_UCTRL_KP
- 1259: MAINSSIM_UCTRL_TN
+ 1251: INTERNAL1251
+ 1252: INTERNAL1252
+ 1253: INTERNAL1253
+ 1254: INTERNAL1254
+ 1255: INTERNAL1255
+ 1256: INTERNAL1256
+ 1257: INTERNAL1257
+ 1258: INTERNAL1258
+ 1259: INTERNAL1259
  1260: Motor-Haltebremse: Typ
  1261: Motor-Haltebremse: Widerstand
  1262: Motor-Haltebremse: Induktivität
- 1263: CTRL Vorsteuerung: Gesamtmasse
- 1264: CTRL Vorsteuerung: Externe Last
+ 1263: INTERNAL1263
+ 1264: INTERNAL1264
  1266: Motorhaltebremstest: Prüfdauer
- 1267: Motorhaltebremstest: Moment zum Zeitpunkt wenn die Bremse einfällt
- 1268: Motorhaltebremstest: Prüfmoment
+ 1267: INTERNAL1267
+ 1268: INTERNAL1268
  1269: Motorhaltebremstest: Anstiegsrate des Prüfmoments
  1270: CTRL Momentbegrenzer: Betrag positiver Stromgrenzwert
  1271: CTRL Momentbegrenzer: Betrag negativer Stromgrenzwert
- 1272: MAINSSIM_MODE
- 1273: MAINSSIM_VOLTAGE
- 1274: MAINSSIM_FREQUENCY
- 1275: MAINSSIM_STATE
+ 1272: INTERNAL1272
+ 1273: INTERNAL1273
+ 1274: INTERNAL1274
+ 1275: INTERNAL1275
  1277: Motor: Magnetisches Ausprägungsverhältnis
  1278: CTRL Zwischenkreis: Spannungsoffset
  1279: Wechselrichter: Summenstrom: Grenzwert
- 1280: Parameteridentifikation: Ablauf
- 1281: Parameter Identifikation: Zeitkonstante
- 1282: Parameter Identifikation: Induktivität in D-Richtung
+ 1280: INTERNAL1280
+ 1281: INTERNAL1281
+ 1282: INTERNAL1282
  1283: Parameter Identifikation: Auslösezeit bei thermischer Überlast
- 1284: Motor: Masse
- 1285: RESERVED1285
- 1286: Motor: Maximalgeschwindigkeit
- 1287: RESERVED1287
- 1288: RESERVED1288
- 1289: Motor: Spitzenkraft
- 1290: Motor: Kraftkonstante
- 1291: RESERVED1291
- 1292: Motor: Polteilung
+ 1284: INTERNAL1284
+ 1285: INTERNAL1285
+ 1286: INTERNAL1286
+ 1287: INTERNAL1287
+ 1288: INTERNAL1288
+ 1289: INTERNAL1289
+ 1290: INTERNAL1290
+ 1291: INTERNAL1291
+ 1292: INTERNAL1292
  1293: CTRL Vektor: Parameter-ID des additiven Kommutierungswinkels
  1294: CTRL Vektor: Additiver Kommutierungswinkel
  1295: Spannungsbeobachter: Phasenspannung U
@@ -1170,7 +1167,7 @@
  1304: Geber: ADC2: Offset
  1305: Geber: ADC1: Verstärkung
  1306: Parameter Identifikation: Verfahrdistanz
- 1307: CTRL Vektor: Vorsteuerzeit
+ 1307: INTERNAL1307
  1308: Virtueller Geber: Wertebereich der Geberposition low word
  1309: Virtueller Geber: Wertebereich der Geberposition high word
  1310: Virtueller Geber: Kommando Referenzieren starten
@@ -1193,7 +1190,7 @@
  1328: Virtueller Geber: Parameter-ID des Status
  1329: Virtueller Geber: Status
  1330: Virtueller Geber: Geber-Maßstab: Inkremente pro Motorumdrehung
- 1331: Virtueller Geber: Schleppfehler
+ 1331: INTERNAL1331
  1333: Geberloser Betrieb: Stillstandsüberwachung: Auslösezeit
  1334: Geberloser Betrieb: Überblendung
  1335: Geberloser Betrieb: Überblendzeit
@@ -1202,7 +1199,7 @@
  1338: Geberloser Betrieb: Sollwert Direktstrom
  1339: Positionsbeobachter: Aktueller Fluss
  1340: CTRL Flussschwächung: Offset Spannungsbegrenzung 
- 1341: RESERVED1341
+ 1341: INTERNAL1341
  1342: Parameter Identifikation: Aktuelle Frequenz des Anregungssignals
  1343: Parameter Identifikation: Trace Variable 1
  1344: Parameter Identifikation: Trace Variable 2
@@ -1210,17 +1207,17 @@
  1346: Positionsbeobachter 2: Modus
  1347: Positionsbeobachter 1: Beobachteter elektrischer Flußwinkel 
  1348: Positionsbeobachter 2: Beobachteter elektrischer Flußwinkel 
- 1349: Positionsbeobachter 1: Beobachtete elektrische Winkelgeschwindigkeit
- 1350: Positionsbeobachter 2: Beobachtete elektrische Winkelgeschwindigkeit
+ 1349: INTERNAL1349
+ 1350: INTERNAL1350
  1351: Positionsbeobachter 1: Parameter A0
  1352: Positionsbeobachter 1: Parameter A1
  1353: Positionsbeobachter 1: Parameter A2
  1354: Beobachter: Mode Bits
- 1355: RESERVED1355
- 1356: RESERVED1356
+ 1355: INTERNAL1355
+ 1356: INTERNAL1356
  1357: Positionsbeobachter 2: Parameter B0 Parameter-ID
  1358: Positionsbeobachter 2: Parameter B1 Parameter-ID
- 1359: RESERVED1359
+ 1359: INTERNAL1359
  1360: Geber2: Diagnosewert ID
  1361: Geber2: Diagnosewert
  1362: Geber3: Diagnosewert ID
@@ -1237,27 +1234,28 @@
  1373: Geber2: SSI Dateninhalt Typ
  1374: Geber3: SSI Dateninhalt Index
  1375: Geber3: SSI Dateninhalt Typ
- 1376: Geber2: Diagnosewert 4
- 1377: Geber1: Diagnosewert 4
- 1378: Geber3: Diagnosewert 4
+ 1376: INTERNAL1376
+ 1377: INTERNAL1377
+ 1378: INTERNAL1378
  1379: Virtueller Geber: Gefilterte Istposition
- 1380: CTRL Moment: Kommando
- 1381: CTRL Moment: Parameter-ID Sollmoment
- 1382: CTRL Moment: Sollmoment
- 1383: CTRL Moment: Sollmoment Änderungsrate
- 1384: CTRL Moment: Minimale Grenzgeschwindigkeit
- 1385: CTRL Moment: Maximale Grenzgeschwindigkeit
- 1386: CTRL Moment: Grenzgeschwindigkeit Änderungsrate
- 1387: CTRL Moment: Status
- 1388: PWM: Konfiguration
+ 1380: INTERNAL1380
+ 1381: INTERNAL1381
+ 1382: INTERNAL1382
+ 1383: INTERNAL1383
+ 1384: INTERNAL1384
+ 1385: INTERNAL1385
+ 1386: INTERNAL1386
+ 1387: INTERNAL1387
+ 1388: INTERNAL1388
  1389: CTRL Zwischenkreis: Sollwert Anstiegszeit
  1390: Geber1: Baudrate
  1391: Geber2: Baudrate
  1392: Geber3: Baudrate
- 1396: Upload der Modul-Monitordaten
- 1397: RESERVED1397
- 1398: RESERVED1398
- 1399: RESERVED1399
+ 1393: CTRL Vorsteuerung: Modus
+ 1396: INTERNAL1396
+ 1397: INTERNAL1397
+ 1398: INTERNAL1398
+ 1399: INTERNAL1399
  1400: Geber1: DCM Modus
  1401: Geber1: Absolute Auflösung einer Geberumdrehung
  1402: Geber2: Absolute Auflösung einer Geberumdrehung
@@ -1268,35 +1266,36 @@
  1407: Geber2: Signalamplitude unterer Grenzwert
  1408: Geber3: Signalamplitude oberer Grenzwert
  1409: Geber3: Signalamplitude unterer Grenzwert
- 1410: CTRL Vorsteuerung: Geschwindigkeitskraftfaktor
- 1411: CTRL Vorsteuerung: Kraft in positiver Richtung
- 1412: CTRL Vorsteuerung: Kraft in negativer Richtung
+ 1410: INTERNAL1410
+ 1411: INTERNAL1411
+ 1412: INTERNAL1412
+ 1413: INTERNAL1413
  1414: Geber1: Kommando Referenzieren starten
  1415: Geber1: Status Referenzposition gültig
  1416: Geber1: Referenzoffset
  1417: Basis-Bewegungen: Absolute Zielposition
  1418: VAX Basis-Bewegungen: Absolute Zielposition
  1419: Achsen Querverbindung: Geber1: Istposition
- 1420: FPGA Trace: Kommando
- 1421: FPGA Trace: Kanalauswahl
- 1422: FPGA Trace: Taktauswahl
- 1423: FPGA Trace: Takt-Teiler
- 1424: FPGA Trace: Triggerverzögerung
- 1425: FPGA Trace: Status
- 1426: RESERVED1426
- 1427: RESERVED1427
- 1428: RESERVED1428
- 1429: Test: Parameter0 I4
- 1430: Test: Parameter1 I4
- 1431: Test: Parameter2 I4
- 1432: MAINSSIM_OBS_CMD
- 1433: MAINSSIM_OBS_MODE
- 1434: MAINSSIM_OBS_STATE
- 1435: MAINSSIM_OBS_PAR_IDX
- 1436: MAINSSIM_OBS_PAR_VALUE
- 1437: MAINSSIM_OBS_OUTPUT
+ 1420: INTERNAL1420
+ 1421: INTERNAL1421
+ 1422: INTERNAL1422
+ 1423: INTERNAL1423
+ 1424: INTERNAL1424
+ 1425: INTERNAL1425
+ 1426: INTERNAL1426
+ 1427: INTERNAL1427
+ 1428: INTERNAL1428
+ 1429: INTERNAL1429
+ 1430: INTERNAL1430
+ 1431: INTERNAL1431
+ 1432: INTERNAL1432
+ 1433: INTERNAL1433
+ 1434: INTERNAL1434
+ 1435: INTERNAL1435
+ 1436: INTERNAL1436
+ 1437: INTERNAL1437
  1438: Systemverwaltung: ACOPOS Identifikationsdaten
- 1439: Diagnose: Aufzeichnungsdaten
+ 1439: INTERNAL1439
  1440: Optionales IO: Steuerkommando
  1441: Optionales IO: Eingang1
  1442: Optionales IO: Eingang2
@@ -1328,15 +1327,15 @@
  1468: Optionales IO: Parameter-ID Ausgang8
  1469: Optionales IO: Parameter-ID Ausgang9
  1470: Optionales IO: Parameter-ID Ausgang10
- 1471: MAINSSIM_FILTER_TYPE
- 1472: MAINSSIM_FILTER_A0
- 1473: MAINSSIM_FILTER_A1
- 1474: MAINSSIM_FILTER_B0
- 1475: MAINSSIM_FILTER_B1
- 1476: MAINSSIM_FILTER_B2
- 1477: SafeMC: ACP Kommunikations Sendekommando (bestätigt)
- 1478: SafeMC: ACP Kommunikations Status
- 1479: SafeMC: ACP Kommunikations Empfangsdaten
+ 1471: INTERNAL1471
+ 1472: INTERNAL1472
+ 1473: INTERNAL1473
+ 1474: INTERNAL1474
+ 1475: INTERNAL1475
+ 1476: INTERNAL1476
+ 1477: INTERNAL1477
+ 1478: INTERNAL1478
+ 1479: INTERNAL1479
  1480: CTRL Momentbegrenzer: Modus
  1481: CTRL Momentbegrenzer: Status
  1482: CTRL Momentbegrenzer: Ausgangsstrom
@@ -1345,7 +1344,7 @@
  1485: CTRL Momentbegrenzer: Parameter-ID LIM_T1_NEG
  1486: CTRL Momentbegrenzer: Parameter-ID LIM_T2_POS
  1487: CTRL Momentbegrenzer: Parameter-ID LIM_T2_NEG
- 1488: CTRL Drehzahl: Parameter-ID additiver Ausgangsstrom
+ 1488: INTERNAL1488
  1489: Motor: Drehzahlabhängige Verlustleistung: Linearer Koeffizient
  1490: Motor: Drehzahlabhängige Verlustleistung: Quadratischer Koeffizient
  1491: CTRL Zwischenkreis: Vorladen: Freigabespannung
@@ -1356,14 +1355,16 @@
  1496: Simulationsmodus: Dämpfungsparameter der Kopplung
  1497: Simulationsmodus: Torsion der Kopplung
  1498: Simulationsmodus: Drehzahl von Masse 2
- 1499: Simulationsmodus: Status
- 1500: Simulationsmodus: Masse1
+ 1499: INTERNAL1499
+ 1500: INTERNAL1500
  1501: Meldungen: Kommando Fehler-Reaktion ausführen
  1502: VAX Meldungen: Kommando Fehler-Reaktion ausführen
  1503: Motor: Temperaturmodell: Modus
  1504: Motor-Haltebremse: Lüftspannung
  1505: Motor-Haltebremse: Haltespannung
  1506: Motor-Haltebremse: Überspannungsgrenzwert
+ 1507: Digitale Eingänge: Parameter-ID für Trigger1
+ 1508: Digitale Eingänge: Parameter-ID für Trigger2
  1509: Achsen Querverbindung: Geber2: Istposition
  1510: Spindelsteigungsfehler-Losekompensation: Modus
  1511: Spindelsteigungsfehler-Losekompensation: Kompensationszeit
@@ -1375,19 +1376,19 @@
  1517: Spindelsteigungsfehler-Losekompensation: Kompensationsausgang
  1518: CTRL Zwischenkreis: Regler: Untere Freigabeschwelle
  1519: CTRL Zwischenkreis: Regler: Obere Freigabeschwelle
- 1520: Virtueller Geber: Aktuelle Verzögerungszeit
+ 1520: INTERNAL1520
  1521: Geber1: Maximale Geschwindikeit für serielle Position
- 1522: Simulationsmodus: Loseparameter pos. Anschlag
- 1523: Simulationsmodus: Loseparameter neg. Anschlag
+ 1522: INTERNAL1522
+ 1523: INTERNAL1523
  1528: Geber2: Diagnosewert 2
  1529: Geber2: Diagnosewert 3
  1530: Geber3: Diagnosewert 2
  1531: Geber3: Diagnosewert 3
  1532: Geber2: Maximale Geschwindikeit für serielle Position
  1533: Geber3: Maximale Geschwindikeit für serielle Position
- 1534: Geber1: Verzögerungszeit für Fehlerreaktion
- 1536: Geber1: Externer Temperaturfühler
- 1537: Geber1: Umdrehungszähler
+ 1534: INTERNAL1534
+ 1536: INTERNAL1536
+ 1537: INTERNAL1537
  1538: Leistungsteil: Temperatursensor 5: Temperatur
  1539: Leistungsteil: Gleichrichter: Temperatur
  1540: Zwischenkreis: Relais: Temperatur
@@ -1398,16 +1399,16 @@
  1545: Wechselrichter: Dauersummenleistung: Last
  1546: Wechselrichter: Spitzensummenleistung: Last
  1547: Motor: Daten für Hardware-Information
- 1548: 24 VDC Versorgung: Gefilterte Spannung
+ 1548: INTERNAL1548
  1549: Basis-Bewegungen: Zielpositionsdifferenz für Modus 'Stop nach Trigger'
- 1550: Sperrschicht-Temperaturmodell: Maximale Temperaturänderung
- 1551: Virtueller Geber: Grenzwert für Positions-Schleppfehler
- 1552: Virtueller Geber: Grenzwert für Geschwindigkeits-Schleppfehler
- 1553: Virtueller Geber: Skalierfaktor für Strom
- 1554: Temperatursensor: Kennlinen: Eingang
- 1555: Temperatursensor: Einsteckmodul: Widerstand
+ 1550: INTERNAL1550
+ 1551: INTERNAL1551
+ 1552: INTERNAL1552
+ 1553: INTERNAL1553
+ 1554: INTERNAL1554
+ 1555: INTERNAL1555
  1556: Geber1: Versorgungspannung
- 1557: CTRL Zwischenkreis: Regler: Kommando
+ 1557: INTERNAL1557
  1558: Wechselrichter: Summenleistung
  1559: Wechselrichter: Dauersummenleistung: Grenzleistung
  1560: Wechselrichter: Spitzensummenleistung: Grenzleistung
@@ -1427,13 +1428,51 @@
  1574: Adreßabbilder: Konfiguration für die Adresszuweisung
  1575: Adreßabbilder: Index der Adresse
  1576: Geber2: Versorgungspannung
- 1577: Interner Test-Parameter für Entwicklung
- 1578: CTRL: Status
- 1579: Signalgenerator: Anzahl der Doppelimpulse
- 1580: Signalgenerator: Amplitude am Signalende
- 1581: SafeMC: Korrektur Zählrichtung
- 1582: SafeMC: ACPCOM Zustand
- 1583: Systemverwaltung: Modus der Antriebs-Zykluszeit
+ 1577: INTERNAL1577
+ 1578: INTERNAL1578
+ 1579: INTERNAL1579
+ 1580: INTERNAL1580
+ 1582: INTERNAL1582
+ 1583: INTERNAL1583
+ 1584: Geber2: Leitungswiderstand Geberversorgung
+ 1586: INTERNAL1586
+ 1587: INTERNAL1587
+ 1588: INTERNAL1588
+ 1589: INTERNAL1589
+ 1590: INTERNAL1590
+ 1591: INTERNAL1591
+ 1592: INTERNAL1592
+ 1593: Geber1: Positionsdifferenz pro Abtastung
+ 1594: Geber2: Positionsdifferenz pro Abtastung
+ 1595: CTRL Vorsteuerung: Reibmodell: Koeffizient C0
+ 1596: CTRL Vorsteuerung: Reibmodell: Koeffizient C1
+ 1597: CTRL Vorsteuerung: Reibmodell: Koeffizient C2
+ 1600: INTERNAL1600
+ 1601: INTERNAL1601
+ 1602: INTERNAL1602
+ 1603: INTERNAL1603
+ 1604: INTERNAL1604
+ 1605: INTERNAL1605
+ 1606: INTERNAL1606
+ 1607: INTERNAL1607
+ 1608: INTERNAL1608
+ 1609: INTERNAL1609
+ 1610: INTERNAL1610
+ 1611: INTERNAL1611
+ 1612: INTERNAL1612
+ 1613: INTERNAL1613
+ 1614: INTERNAL1614
+ 1615: INTERNAL1615
+ 1616: INTERNAL1616
+ 1617: INTERNAL1617
+ 1618: Digitale Eingänge: Ruckzeit für Quickstop Bremsrampe
+ 1619: Simulationsmodus: Getriebeeingangsumdrehungen
+ 1620: Simulationsmodus: Getriebeausgangsumdrehungen
+ 1621: Simulationsmodus: Getrieberichtung
+ 1622: INTERNAL1622
+ 1623: INTERNAL1623
+ 1624: INTERNAL1624
+ 1625: INTERNAL1625
  3072: FB LOGIC: Modus
  3080: FB LOGIC: Parameter-ID Eingang1
  3088: FB LOGIC: Parameter-ID Eingang2
@@ -1534,6 +1573,13 @@
  5976: FB DIO: Eingang 7: Zeitpunkt der fallenden Flanke
  5984: FB DIO: Eingang 8: Zeitpunkt der steigenden Flanke
  5992: FB DIO: Eingang 8: Zeitpunkt der fallenden Flanke
+ 6000: FB DIO: Ausgangskonfiguration lesen
+ 6008: FB DIO: Kommando Ausgangskonfiguration setzen
+ 6016: FB DIO: Kommando Ausgangskonfiguration löschen
+ 6024: FB DIO: Eingangskonfiguration lesen
+ 6032: FB DIO: Kommando Eingangskonfiguration setzen
+ 6040: FB DIO: Kommando Eingangskonfiguration löschen
+ 6048: FB DIO: Ausgangsrückführung
  6144: FB AIO: Kanal1: Analogwert
  6152: FB AIO: Kanal2: Analogwert
  6160: FB AIO: Kanal1: Komparator Schwellwert Pointer Parameter
@@ -1555,6 +1601,17 @@
  6288: FB AIO: Kanal2: Filter
  6296: FB AIO: Kanal3: Analogwert
  6304: FB AIO: Kanal4: Analogwert
+ 6312: FB AIO: Ausgangskonfiguration lesen
+ 6320: FB AIO: Kommando Ausgangskonfiguration setzen
+ 6328: FB AIO: Kommando Ausgangskonfiguration löschen
+ 6336: FB AIO: Eingangskonfiguration lesen
+ 6344: FB AIO: Kommando Eingangskonfiguration setzen
+ 6352: FB AIO: Kommando Eingangskonfiguration löschen
+ 6360: FB AIO: Index des aktuellen Analog IOs
+ 6368: FB AIO: Parameter-ID Ausgang (Index)
+ 6376: FB AIO: Ausgangsmodus
+ 6384: FB AIO: IO-Kommando
+ 6392: FB AIO: Überwachungen
  6656: FB CMP: Parameter-ID Eingang
  6664: FB CMP: Schwellwert
  6672: FB CMP: Fenster
@@ -1846,275 +1903,279 @@
 14480: FB DYNSYS: Systemzustand 4
 14488: FB DYNSYS: Systemzustand 5
 14496: FB DYNSYS: Zustand
-63488: RESERVED63488
-63489: LLM: der Achse zugewiesene, aktive Phasen
-63490: LLM: Anzahl der Phasen (Spulen) am Segment
-63491: LLM: Zwischenkreis: gefilterte Mittenspannung
-63492: LLM: Zwischenkreis: Mittenspannung
-63493: LLM: Shutlle: Initialposition
-63494: LLM: Shutlle: Index der Initialposition
-63495: ISC: Zustand
-63496: ISC: Fehlertoleranz
-63497: LLM: IBN
-63498: ISC: interner Status
-63499: ISC: Fehlerzähler Low-Side
-63500: ISC: Fehlerzähler High-Side
-63501: LLM: gemessener Phasenstrom 1
-63502: LLM: gemessener Phasenstrom 2
-63503: LLM: gemessener Phasenstrom 3
-63504: LLM: gemessener Phasenstrom 4
-63505: LLM: gemessener Phasenstrom 5
-63506: LLM: gemessener Phasenstrom 6
-63507: LLM: gemessener Phasenstrom 7
-63508: LLM: gemessener Phasenstrom 8
-63509: LLM: gemessener Phasenstrom 9
-63510: LLM: gemessener Phasenstrom 10
-63511: LLM: gemessener Phasenstrom 11
-63512: LLM: gemessener Phasenstrom 12
-63513: LLM: gemessener Phasenstrom 13
-63514: LLM: gemessener Phasenstrom 14
-63515: LLM: gemessener Phasenstrom 15
-63516: LLM: gemessener Phasenstrom 16
-63517: LLM: gemessener Phasenstrom 17
-63518: LLM: gemessener Phasenstrom 18
-63519: LLM: gemessener Phasenstrom 19
-63520: LLM: gemessener Phasenstrom 20
-63521: LLM: gemessener Phasenstrom 21
-63522: LLM: gemessener Phasenstrom 22
-63523: LLM: gemessener Phasenstrom 23
-63524: LLM: gemessener Phasenstrom 24
-63525: LLM: gemessener Phasenstrom 25
-63526: LLM: gemessener Phasenstrom 26
-63527: LLM: gemessener Phasenstrom 27
-63528: LLM: gemessener Phasenstrom 28
-63529: LLM: gemessener Phasenstrom 29
-63530: LLM: gemessener Phasenstrom 30
-63531: LLM: gemessener Phasenstrom 31
-63532: LLM: gemessener Phasenstrom 32
-63533: LLM: gemessener Phasenstrom 33
-63534: LLM: gemessener Phasenstrom 34
-63535: LLM: gemessener Phasenstrom 35
-63536: LLM: gemessener Phasenstrom 36
-63537: LLM: gemessener Phasenstrom 37
-63538: LLM: gemessener Phasenstrom 38
-63539: LLM: gemessener Phasenstrom 39
-63540: LLM: gemessener Phasenstrom 40
-63541: LLM: gemessener Phasenstrom 41
-63542: LLM: gemessener Phasenstrom 42
-63543: RESERVED63543
-63544: RESERVED63544
-63545: RESERVED63545
-63546: RESERVED63546
-63547: RESERVED63547
-63548: RESERVED63548
-63549: RESERVED63549
-63550: RESERVED63550
-63551: LLM: Sollphasenstrom 1
-63552: LLM: Sollphasenstrom 2
-63553: LLM: Sollphasenstrom 3
-63554: LLM: Sollphasenstrom 4
-63555: LLM: Sollphasenstrom 5
-63556: LLM: Sollphasenstrom 6
-63557: LLM: Sollphasenstrom 7
-63558: LLM: Sollphasenstrom 8
-63559: LLM: Sollphasenstrom 9
-63560: LLM: Sollphasenstrom 10
-63561: LLM: Sollphasenstrom 11
-63562: LLM: Sollphasenstrom 12
-63563: LLM: Sollphasenstrom 13
-63564: LLM: Sollphasenstrom 14
-63565: LLM: Sollphasenstrom 15
-63566: LLM: Sollphasenstrom 16
-63567: LLM: Sollphasenstrom 17
-63568: LLM: Sollphasenstrom 18
-63569: LLM: Sollphasenstrom 19
-63570: LLM: Sollphasenstrom 20
-63571: LLM: Sollphasenstrom 21
-63572: LLM: Sollphasenstrom 22
-63573: LLM: Sollphasenstrom 23
-63574: LLM: Sollphasenstrom 24
-63575: LLM: Sollphasenstrom 25
-63576: LLM: Sollphasenstrom 26
-63577: LLM: Sollphasenstrom 27
-63578: LLM: Sollphasenstrom 28
-63579: LLM: Sollphasenstrom 29
-63580: LLM: Sollphasenstrom 30
-63581: LLM: Sollphasenstrom 31
-63582: LLM: Sollphasenstrom 32
-63583: LLM: Sollphasenstrom 33
-63584: LLM: Sollphasenstrom 34
-63585: LLM: Sollphasenstrom 35
-63586: LLM: Sollphasenstrom 36
-63587: LLM: Sollphasenstrom 37
-63588: LLM: Sollphasenstrom 38
-63589: LLM: Sollphasenstrom 39
-63590: LLM: Sollphasenstrom 40
-63591: LLM: Sollphasenstrom 41
-63592: LLM: Sollphasenstrom 42
-63593: RESERVED63593
-63594: RESERVED63594
-63595: RESERVED63595
-63596: RESERVED63596
-63597: RESERVED63597
-63598: RESERVED63598
-63599: RESERVED63599
-63600: RESERVED63600
-63601: LLM: Sollphasenspannung 1
-63602: LLM: Sollphasenspannung 2
-63603: LLM: Sollphasenspannung 3
-63604: LLM: Sollphasenspannung 4
-63605: LLM: Sollphasenspannung 5
-63606: LLM: Sollphasenspannung 6
-63607: LLM: Sollphasenspannung 7
-63608: LLM: Sollphasenspannung 8
-63609: LLM: Sollphasenspannung 9
-63610: LLM: Sollphasenspannung 10
-63611: LLM: Sollphasenspannung 11
-63612: LLM: Sollphasenspannung 12
-63613: LLM: Sollphasenspannung 13
-63614: LLM: Sollphasenspannung 14
-63615: LLM: Sollphasenspannung 15
-63616: LLM: Sollphasenspannung 16
-63617: LLM: Sollphasenspannung 17
-63618: LLM: Sollphasenspannung 18
-63619: LLM: Sollphasenspannung 19
-63620: LLM: Sollphasenspannung 20
-63621: LLM: Sollphasenspannung 21
-63622: LLM: Sollphasenspannung 22
-63623: LLM: Sollphasenspannung 23
-63624: LLM: Sollphasenspannung 24
-63625: LLM: Sollphasenspannung 25
-63626: LLM: Sollphasenspannung 26
-63627: LLM: Sollphasenspannung 27
-63628: LLM: Sollphasenspannung 28
-63629: LLM: Sollphasenspannung 29
-63630: LLM: Sollphasenspannung 30
-63631: LLM: Sollphasenspannung 31
-63632: LLM: Sollphasenspannung 32
-63633: LLM: Sollphasenspannung 33
-63634: LLM: Sollphasenspannung 34
-63635: LLM: Sollphasenspannung 35
-63636: LLM: Sollphasenspannung 36
-63637: LLM: Sollphasenspannung 37
-63638: LLM: Sollphasenspannung 38
-63639: LLM: Sollphasenspannung 39
-63640: LLM: Sollphasenspannung 40
-63641: LLM: Sollphasenspannung 41
-63642: LLM: Sollphasenspannung 42
-63643: LLM: Temperatursensoren: LST Luft
-63644: LLM: Temperatursensoren: LST Balancer
-63645: LLM: Temperatursensoren: LST Motor 1
-63646: LLM: Temperatursensoren: LST Motor 2
-63647: RESERVED63647
-63648: RESERVED63648
-63649: RESERVED63649
-63650: Virtueller Geber: Istposition
-63651: Virtueller Geber: Positionsdifferenz in 200us
-63652: Sensor Map: aktiver Sensor
-63653: Sensor Map: Periode aktiver Sensor
-63654: Sensor Map: Gamma aktiver Sensor
-63655: Sensor Map: Betrag aktiver Sensor
-63656: Sensor Map: Sinus aktiver Sensor
-63657: Sensor Map: Cosinus aktiver Sensor
-63711: Sinus Signal Magnetsensor 1
-63712: Cosinus Signal Magnetsensor 1
-63713: Sinus Signal Magnetsensor 2
-63714: Cosinus Signal Magnetsensor 2
-63715: Sinus Signal Magnetsensor 3
-63716: Cosinus Signal Magnetsensor 3
-63717: Sinus Signal Magnetsensor 4
-63718: Cosinus Signal Magnetsensor 4
-63719: Sinus Signal Magnetsensor 5
-63720: Cosinus Signal Magnetsensor 5
-63721: Sinus Signal Magnetsensor 6
-63722: Cosinus Signal Magnetsensor 6
-63723: Sinus Signal Magnetsensor 7
-63724: Cosinus Signal Magnetsensor 7
-63725: Sinus Signal Magnetsensor 8
-63726: Cosinus Signal Magnetsensor 8
-63727: Sinus Signal Magnetsensor 9
-63728: Cosinus Signal Magnetsensor 9
-63729: Sinus Signal Magnetsensor 10
-63730: Cosinus Signal Magnetsensor 10
-63731: Sinus Signal Magnetsensor 11
-63732: Cosinus Signal Magnetsensor 11
-63733: Sinus Signal Magnetsensor 12
-63734: Cosinus Signal Magnetsensor 12
-63735: Sinus Signal Magnetsensor 13
-63736: Cosinus Signal Magnetsensor 13
-63737: Sinus Signal Magnetsensor 14
-63738: Cosinus Signal Magnetsensor 14
-63739: Sinus Signal Magnetsensor 15
-63740: Cosinus Signal Magnetsensor 15
-63741: Sinus Signal Magnetsensor 16
-63742: Cosinus Signal Magnetsensor 16
-63743: Sinus Signal Magnetsensor 17
-63744: Cosinus Signal Magnetsensor 17
-63745: Sinus Signal Magnetsensor 18
-63746: Cosinus Signal Magnetsensor 18
-63747: Sinus Signal Magnetsensor 19
-63748: Cosinus Signal Magnetsensor 19
-63749: Sinus Signal Magnetsensor 20
-63750: Cosinus Signal Magnetsensor 20
-63751: Sinus Signal Magnetsensor 21
-63752: Cosinus Signal Magnetsensor 21
-63753: Sinus Signal Magnetsensor 22
-63754: Cosinus Signal Magnetsensor 22
-63755: Sinus Signal Magnetsensor 23
-63756: Cosinus Signal Magnetsensor 23
-63757: Sinus Signal Magnetsensor 24
-63758: Cosinus Signal Magnetsensor 24
-63759: Sinus Signal Magnetsensor 25
-63760: Cosinus Signal Magnetsensor 25
-63761: Sinus Signal Magnetsensor 26
-63762: Cosinus Signal Magnetsensor 26
-63763: Sinus Signal Magnetsensor 27
-63764: Cosinus Signal Magnetsensor 27
-63765: Sinus Signal Magnetsensor 28
-63766: Cosinus Signal Magnetsensor 28
-63767: Sinus Signal Magnetsensor 29
-63768: Cosinus Signal Magnetsensor 29
-63769: Sinus Signal Magnetsensor 30
-63770: Cosinus Signal Magnetsensor 30
-63771: Sinus Signal Magnetsensor 31
-63772: Cosinus Signal Magnetsensor 31
-63773: Sinus Signal Magnetsensor 32
-63774: Cosinus Signal Magnetsensor 32
-63775: Sinus Signal Magnetsensor 33
-63776: Cosinus Signal Magnetsensor 33
-63777: Sinus Signal Magnetsensor 34
-63778: Cosinus Signal Magnetsensor 34
-63779: Sinus Signal Magnetsensor 35
-63780: Cosinus Signal Magnetsensor 35
-63781: Sinus Signal Magnetsensor 36
-63782: Cosinus Signal Magnetsensor 36
-63783: Sinus Signal Magnetsensor 37
-63784: Cosinus Signal Magnetsensor 37
-63785: Sinus Signal Magnetsensor 38
-63786: Cosinus Signal Magnetsensor 38
-63787: Sinus Signal Magnetsensor 39
-63788: Cosinus Signal Magnetsensor 39
-63789: Sinus Signal Magnetsensor 40
-63790: Cosinus Signal Magnetsensor 40
-63791: Sinus Signal Magnetsensor 41
-63792: Cosinus Signal Magnetsensor 41
-63800: LLM: Weichen-Auslöse-Strom
-63879: LLM: Konfiguration: Index eines Parametersatzes
-63880: LLM: Lageregler: Istposition
-63881: LLM: Test R8
-63882: LLM: Zyklischer Sollwert
-63883: LLM: Lageregler: Sollposition
-63884: LLM Netzwerk: Zykluszeit der Sollwerte
-63885: LLM: Zyklische Channel Status Bits
-63886: LLM: Zyklische Segment Steuer Bits
-63887: LLM: Zyklische Channel Steuer Bits
-63888: LLM: Zyklische Segment Status Bits
+63488: INTERNAL63488
+63489: INTERNAL63489
+63490: INTERNAL63490
+63491: INTERNAL63491
+63492: INTERNAL63492
+63493: INTERNAL63493
+63494: INTERNAL63494
+63495: INTERNAL63495
+63496: INTERNAL63496
+63497: INTERNAL63497
+63498: INTERNAL63498
+63499: INTERNAL63499
+63500: INTERNAL63500
+63501: INTERNAL63501
+63502: INTERNAL63502
+63503: INTERNAL63503
+63504: INTERNAL63504
+63505: INTERNAL63505
+63506: INTERNAL63506
+63507: INTERNAL63507
+63508: INTERNAL63508
+63509: INTERNAL63509
+63510: INTERNAL63510
+63511: INTERNAL63511
+63512: INTERNAL63512
+63513: INTERNAL63513
+63514: INTERNAL63514
+63515: INTERNAL63515
+63516: INTERNAL63516
+63517: INTERNAL63517
+63518: INTERNAL63518
+63519: INTERNAL63519
+63520: INTERNAL63520
+63521: INTERNAL63521
+63522: INTERNAL63522
+63523: INTERNAL63523
+63524: INTERNAL63524
+63525: INTERNAL63525
+63526: INTERNAL63526
+63527: INTERNAL63527
+63528: INTERNAL63528
+63529: INTERNAL63529
+63530: INTERNAL63530
+63531: INTERNAL63531
+63532: INTERNAL63532
+63533: INTERNAL63533
+63534: INTERNAL63534
+63535: INTERNAL63535
+63536: INTERNAL63536
+63537: INTERNAL63537
+63538: INTERNAL63538
+63539: INTERNAL63539
+63540: INTERNAL63540
+63541: INTERNAL63541
+63542: INTERNAL63542
+63543: INTERNAL63543
+63544: INTERNAL63544
+63545: INTERNAL63545
+63546: INTERNAL63546
+63547: INTERNAL63547
+63548: INTERNAL63548
+63549: INTERNAL63549
+63550: INTERNAL63550
+63551: INTERNAL63551
+63552: INTERNAL63552
+63553: INTERNAL63553
+63554: INTERNAL63554
+63555: INTERNAL63555
+63556: INTERNAL63556
+63557: INTERNAL63557
+63558: INTERNAL63558
+63559: INTERNAL63559
+63560: INTERNAL63560
+63561: INTERNAL63561
+63562: INTERNAL63562
+63563: INTERNAL63563
+63564: INTERNAL63564
+63565: INTERNAL63565
+63566: INTERNAL63566
+63567: INTERNAL63567
+63568: INTERNAL63568
+63569: INTERNAL63569
+63570: INTERNAL63570
+63571: INTERNAL63571
+63572: INTERNAL63572
+63573: INTERNAL63573
+63574: INTERNAL63574
+63575: INTERNAL63575
+63576: INTERNAL63576
+63577: INTERNAL63577
+63578: INTERNAL63578
+63579: INTERNAL63579
+63580: INTERNAL63580
+63581: INTERNAL63581
+63582: INTERNAL63582
+63583: INTERNAL63583
+63584: INTERNAL63584
+63585: INTERNAL63585
+63586: INTERNAL63586
+63587: INTERNAL63587
+63588: INTERNAL63588
+63589: INTERNAL63589
+63590: INTERNAL63590
+63591: INTERNAL63591
+63592: INTERNAL63592
+63593: INTERNAL63593
+63594: INTERNAL63594
+63595: INTERNAL63595
+63596: INTERNAL63596
+63597: INTERNAL63597
+63598: INTERNAL63598
+63599: INTERNAL63599
+63600: INTERNAL63600
+63601: INTERNAL63601
+63602: INTERNAL63602
+63603: INTERNAL63603
+63604: INTERNAL63604
+63605: INTERNAL63605
+63606: INTERNAL63606
+63607: INTERNAL63607
+63608: INTERNAL63608
+63609: INTERNAL63609
+63610: INTERNAL63610
+63611: INTERNAL63611
+63612: INTERNAL63612
+63613: INTERNAL63613
+63614: INTERNAL63614
+63615: INTERNAL63615
+63616: INTERNAL63616
+63617: INTERNAL63617
+63618: INTERNAL63618
+63619: INTERNAL63619
+63620: INTERNAL63620
+63621: INTERNAL63621
+63622: INTERNAL63622
+63623: INTERNAL63623
+63624: INTERNAL63624
+63625: INTERNAL63625
+63626: INTERNAL63626
+63627: INTERNAL63627
+63628: INTERNAL63628
+63629: INTERNAL63629
+63630: INTERNAL63630
+63631: INTERNAL63631
+63632: INTERNAL63632
+63633: INTERNAL63633
+63634: INTERNAL63634
+63635: INTERNAL63635
+63636: INTERNAL63636
+63637: INTERNAL63637
+63638: INTERNAL63638
+63639: INTERNAL63639
+63640: INTERNAL63640
+63641: INTERNAL63641
+63642: INTERNAL63642
+63643: INTERNAL63643
+63644: INTERNAL63644
+63645: INTERNAL63645
+63646: INTERNAL63646
+63647: INTERNAL63647
+63648: INTERNAL63648
+63649: INTERNAL63649
+63650: INTERNAL63650
+63651: INTERNAL63651
+63652: INTERNAL63652
+63653: INTERNAL63653
+63654: INTERNAL63654
+63655: INTERNAL63655
+63656: INTERNAL63656
+63657: INTERNAL63657
+63660: INTERNAL63660
+63663: INTERNAL63663
+63664: INTERNAL63664
+63672: INTERNAL63672
+63711: INTERNAL63711
+63712: INTERNAL63712
+63713: INTERNAL63713
+63714: INTERNAL63714
+63715: INTERNAL63715
+63716: INTERNAL63716
+63717: INTERNAL63717
+63718: INTERNAL63718
+63719: INTERNAL63719
+63720: INTERNAL63720
+63721: INTERNAL63721
+63722: INTERNAL63722
+63723: INTERNAL63723
+63724: INTERNAL63724
+63725: INTERNAL63725
+63726: INTERNAL63726
+63727: INTERNAL63727
+63728: INTERNAL63728
+63729: INTERNAL63729
+63730: INTERNAL63730
+63731: INTERNAL63731
+63732: INTERNAL63732
+63733: INTERNAL63733
+63734: INTERNAL63734
+63735: INTERNAL63735
+63736: INTERNAL63736
+63737: INTERNAL63737
+63738: INTERNAL63738
+63739: INTERNAL63739
+63740: INTERNAL63740
+63741: INTERNAL63741
+63742: INTERNAL63742
+63743: INTERNAL63743
+63744: INTERNAL63744
+63745: INTERNAL63745
+63746: INTERNAL63746
+63747: INTERNAL63747
+63748: INTERNAL63748
+63749: INTERNAL63749
+63750: INTERNAL63750
+63751: INTERNAL63751
+63752: INTERNAL63752
+63753: INTERNAL63753
+63754: INTERNAL63754
+63755: INTERNAL63755
+63756: INTERNAL63756
+63757: INTERNAL63757
+63758: INTERNAL63758
+63759: INTERNAL63759
+63760: INTERNAL63760
+63761: INTERNAL63761
+63762: INTERNAL63762
+63763: INTERNAL63763
+63764: INTERNAL63764
+63765: INTERNAL63765
+63766: INTERNAL63766
+63767: INTERNAL63767
+63768: INTERNAL63768
+63769: INTERNAL63769
+63770: INTERNAL63770
+63771: INTERNAL63771
+63772: INTERNAL63772
+63773: INTERNAL63773
+63774: INTERNAL63774
+63775: INTERNAL63775
+63776: INTERNAL63776
+63777: INTERNAL63777
+63778: INTERNAL63778
+63779: INTERNAL63779
+63780: INTERNAL63780
+63781: INTERNAL63781
+63782: INTERNAL63782
+63783: INTERNAL63783
+63784: INTERNAL63784
+63785: INTERNAL63785
+63786: INTERNAL63786
+63787: INTERNAL63787
+63788: INTERNAL63788
+63789: INTERNAL63789
+63790: INTERNAL63790
+63791: INTERNAL63791
+63792: INTERNAL63792
+63800: INTERNAL63800
+63879: INTERNAL63879
+63880: INTERNAL63880
+63881: INTERNAL63881
+63882: INTERNAL63882
+63883: INTERNAL63883
+63884: INTERNAL63884
+63885: INTERNAL63885
+63886: INTERNAL63886
+63887: INTERNAL63887
+63888: INTERNAL63888
 64201: Antriebsanpassung: Geschwindigkeit bei maximalem Ausgangswert
 64225: Geber1: Wertebereich der Geberposition
 64232: Schrittmotor: Schrittauflösung: Schritte pro Motorumdrehung
 64233: Schrittmotor: Last-Maßstab: Einheiten pro SM_SCALE_LOAD_MOTREV Motorumdrehungen
 64234: Schrittmotor: Last-Maßstab: Motorumdrehungen
 64237: Geber2: Wertebereich der Geberposition
-64238: Sollwertausgabe, Verzögerungszeit (Regler - HW-Ausgabe)
-64250: Antriebsanpassung: Modus
+64238: INTERNAL64238
+64250: INTERNAL64250
 65535: Meldungen: Fehler-Response

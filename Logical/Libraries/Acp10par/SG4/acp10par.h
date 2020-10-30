@@ -1,14 +1,5 @@
-/****************************************************************************
-*                    B & R   P O S I T I O N I N G                          *
-*****************************************************************************
-*                                                                           *
-*            Header File for Library ACP10PAR (Version 3162)                * 
-*                                                                           *
-**************************** COPYRIGHT (C) **********************************
-*     THIS SOFTWARE IS THE PROPERTY OF B&R AUSTRIA: ALL RIGHTS RESERVED.    *
-*     NO PART OF THIS SOFTWARE MAY BE USED OR COPIED IN ANY WAY WITHOUT     *
-*              THE PRIOR WRITTEN PERMISSION OF B&R AUSTRIA.                 *
-****************************************************************************/
+/* acp10par.h V5.02.1 */ 
+/* COPYRIGHT (C) B&R Industrial Automation GmbH */ 
 
 #ifndef ACP10PAR_H_ 
 #define ACP10PAR_H_ 
@@ -86,7 +77,7 @@
 #define ACP10PAR_PHASE_MON_IGNORE            80 /* (UINT) Power mains: Ignore phase failure */
 #define ACP10PAR_CMD_MOTOR_DATA              81 /* (UINT) Motor: Command */
 #define ACP10PAR_ENCOD_STATUS                82 /* (UDINT) Encoder1: Status */
-#define ACP10PAR_MOTOR_DATA_STATUS           84 /* (UINT) Motor: Dataset status */
+#define ACP10PAR_MOTOR_DATA_STATUS           84 /* (UINT) Motor: Encoder data transfer: Status */
 #define ACP10PAR_ENCOD2_TYPE                 85 /* (USINT) Encoder2: Type */
 #define ACP10PAR_CMD_BRAKE                   86 /* (UINT) Motor holding brake: Command */
 #define ACP10PAR_FFCTRL_TORQUE_POS           87 /* (REAL) CTRL Feed forward: Torque in positive direction [Nm] */
@@ -259,6 +250,7 @@
 #define ACP10PAR_FFCTRL_INERTIA             301 /* (REAL) CTRL Feed forward: Mass moment of inertia [kgm²] */
 #define ACP10PAR_UDC_FILTER                 302 /* (REAL) CTRL DC bus: Filtered voltage [V] */
 #define ACP10PAR_ENCOD_ADC1                 303 /* (REAL) Encoder1: ADC1 value */
+#define ACP10PAR_CONST_I4_SHRT_MIN          306 /* (DINT) Function block: Constant minimum value 2byte signed */
 #define ACP10PAR_SAFEMC_POS_ACT             309 /* (DINT) SafeMC: Actual position [Units] */
 #define ACP10PAR_CONST_I4_ONE               310 /* (DINT) Function block: Constant one */
 #define ACP10PAR_ENABLE_CONFIG              311 /* (UDINT) ENABLE: Configuration */
@@ -286,11 +278,7 @@
 #define ACP10PAR_ERRESP_UDC_POWERFAIL       351 /* (UDINT) Power mains: Error response */
 #define ACP10PAR_LOAD_MOTOR_MODEL_MAX       352 /* (REAL) Motor: Temperature model: Maximum load [%] */
 #define ACP10PAR_SYS_TIME                   355 /* (UDINT) Drive synchronisation: Total time [us] */
-#define ACP10PAR_DIO_STATE                  358 /* (UDINT) Digital IO: Status */
 #define ACP10PAR_SYNC_SYS_TIME_DIFF         359 /* (DINT) Drive synchronisation: Deviation from master time */
-#define ACP10PAR_DIO_CONFIG                 360 /* (UDINT) Digital IO: Configuration */
-#define ACP10PAR_CMD_DO_SET                 361 /* (UDINT) Command: Digital output set */
-#define ACP10PAR_CMD_DO_CLR                 362 /* (UDINT) Command: Digital output clear */
 #define ACP10PAR_STAT_UDC_POWERFAIL         367 /* (UDINT) Power mains: Status */
 #define ACP10PAR_UVLIM_MODE                 368 /* (UDINT) CTRL DC bus: Limiter: Mode */
 #define ACP10PAR_ENCOD_REF_PULSE_STATUS     369 /* (USINT) Encoder1: INC Reference pulse state */
@@ -607,10 +595,10 @@
 #define ACP10PAR_A_OVERRIDE_VAX1            784 /* (INT) VAX Basis movements: Acceleration override */
 #define ACP10PAR_CYCLIC_MON_PAR_INDEX       787 /* (USINT) Cyclic communication: Parameter index of monitor data from drive */
 #define ACP10PAR_CYCLIC_MON_PARID           788 /* (UINT) Cyclic communication: Parameter ID of monitor data from drive */
-#define ACP10PAR_TRIG1_RISE_EDGE_TIME       789 /* (UDINT) Time of rising edge trigger1 [us] */
-#define ACP10PAR_TRIG1_FALL_EDGE_TIME       790 /* (UDINT) Time of falling edge trigger1 [us] */
-#define ACP10PAR_TRIG2_RISE_EDGE_TIME       791 /* (UDINT) Time of rising edge trigger2 [us] */
-#define ACP10PAR_TRIG2_FALL_EDGE_TIME       792 /* (UDINT) Time of falling edge trigger2 [us] */
+#define ACP10PAR_TRIG1_RISE_EDGE_TIME       789 /* (UDINT) Digital inputs: Time of rising edge trigger1 [us] */
+#define ACP10PAR_TRIG1_FALL_EDGE_TIME       790 /* (UDINT) Digital inputs: Time of falling edge trigger1 [us] */
+#define ACP10PAR_TRIG2_RISE_EDGE_TIME       791 /* (UDINT) Digital inputs: Time of rising edge trigger2 [us] */
+#define ACP10PAR_TRIG2_FALL_EDGE_TIME       792 /* (UDINT) Digital inputs: Time of falling edge trigger2 [us] */
 #define ACP10PAR_STAT_ENABLE                794 /* (UDINT) Digital inputs: Status enable */
 #define ACP10PAR_AUT_SL_FACTOR_ID           795 /* (UINT) Cam automat: Parameter ID for multiplication factor of slave axis */
 #define ACP10PAR_AUT_SL_FACTOR_ID_VAX1      796 /* (UINT) VAX Cam automat: Parameter ID for multiplication factor of slave axis */
@@ -657,6 +645,7 @@
 #define ACP10PAR_MOTOR_TAU_THERM            849 /* (REAL) Motor: Thermal time constant [s] */
 #define ACP10PAR_UCTRL_KV                   850 /* (REAL) CTRL DC bus: Proportional amplification factor [A/V] */
 #define ACP10PAR_UCTRL_UDC_REF              851 /* (REAL) CTRL DC bus: Set value voltage [V] */
+#define ACP10PAR_UCTRL_ISQ_REF              852 /* (REAL) CTRL DC bus: Set value current [A] */
 #define ACP10PAR_UCTRL_UDC_REF_PARID        853 /* (UINT) CTRL DC bus: Parameter ID set value voltage */
 #define ACP10PAR_TEMP_MODUL3                859 /* (REAL) Power stage: Temperature sensor 3: Temperature [°C] */
 #define ACP10PAR_TEMP_MODUL4                860 /* (REAL) Power stage: Temperature sensor 4: Temperature [°C] */
@@ -1074,6 +1063,7 @@
 #define ACP10PAR_ENCOD_BAUDRATE            1390 /* (DINT) Encoder1: Baud rate [kBaud] */
 #define ACP10PAR_ENCOD2_BAUDRATE           1391 /* (DINT) Encoder2: Baud rate [kBaud] */
 #define ACP10PAR_ENCOD3_BAUDRATE           1392 /* (DINT) Encoder3: Baud rate [kBaud] */
+#define ACP10PAR_FFCTRL_MODE               1393 /* (UINT) CTRL Feed forward: Mode */
 #define ACP10PAR_ENCOD_REF_DCM_MODE        1400 /* (UINT) Encoder1: DCM Mode */
 #define ACP10PAR_ENCOD_ABS_RES             1401 /* (DINT) Encoder1: Absolute resolution of an encoder revolution */
 #define ACP10PAR_ENCOD2_ABS_RES            1402 /* (DINT) Encoder2: Absolute resolution of an encoder revolution */
@@ -1090,6 +1080,7 @@
 #define ACP10PAR_TARGET_S_ABS              1417 /* (DINT) Basis movements: Absolute target position [Units] */
 #define ACP10PAR_TARGET_S_ABS_VAX1         1418 /* (DINT) VAX Basis movements: Absolute target position [Units] */
 #define ACP10PAR_CROSSLINK_ENC1_S_ACT      1419 /* (UINT) Axis crosslink: Encoder1: Actual position */
+#define ACP10PAR_ACOPOS_IDENT_DATA         1438 /* (DATA) System administration: ACOPOS identification data */
 #define ACP10PAR_OPTIONAL_CTRL_CMD         1440 /* (UDINT) Optional IO: Control command */
 #define ACP10PAR_OPTIONAL_IN1              1441 /* (DINT) Optional IO: Input1 */
 #define ACP10PAR_OPTIONAL_IN2              1442 /* (DINT) Optional IO: Input2 */
@@ -1145,6 +1136,8 @@
 #define ACP10PAR_MOTOR_BRAKE_VOLT_REL      1504 /* (REAL) Motor holding brake: Release voltage [V] */
 #define ACP10PAR_MOTOR_BRAKE_VOLT_HOLD     1505 /* (REAL) Motor holding brake: Hold voltage [V] */
 #define ACP10PAR_MOTOR_BRAKE_VOLT_MAX      1506 /* (REAL) Motor holding brake: Overvoltage limit [V] */
+#define ACP10PAR_TRIGGER1_PARID            1507 /* (UINT) Digital inputs: Parameter ID for trigger1 */
+#define ACP10PAR_TRIGGER2_PARID            1508 /* (UINT) Digital inputs: Parameter ID for trigger2 */
 #define ACP10PAR_CROSSLINK_ENC2_S_ACT      1509 /* (UINT) Axis crosslink: Encoder2: Actual position */
 #define ACP10PAR_PBC_MODE                  1510 /* (UINT) Pitch error-backlash compensation: Mode */
 #define ACP10PAR_PBC_TC                    1511 /* (REAL) Pitch error-backlash compensation: Compensation time [s] */
@@ -1194,7 +1187,16 @@
 #define ACP10PAR_ADDRESS_MAPPER_CONFIG     1574 /* (UDINT) Address mapper: Configuration for address assignment */
 #define ACP10PAR_ADDRESS_MAPPER_INDEX      1575 /* (UDINT) Address mapper: Index of address */
 #define ACP10PAR_ENCOD2_SUPPLY_VOLTAGE     1576 /* (REAL) Encoder2: Supply voltage [V] */
-#define ACP10PAR_SAFEMC_COUNT_DIR_CORR     1581 /* (USINT) SafeMC: Corretction count direction */
+#define ACP10PAR_ENCOD2_LINE_RESISTANCE    1584 /* (REAL) Encoder2: Line resistance encoder power supply [Ohm] */
+#define ACP10PAR_ENCOD_DPOS_ACT            1593 /* (DINT) Encoder1: Position difference per sample [Incr] */
+#define ACP10PAR_ENCOD2_DPOS_ACT           1594 /* (DINT) Encoder2: Position difference per sample [Incr] */
+#define ACP10PAR_FFCTRL_FRICTION_C0        1595 /* (REAL) CTRL Feed forward: Friction model: Coefficient C0 */
+#define ACP10PAR_FFCTRL_FRICTION_C1        1596 /* (REAL) CTRL Feed forward: Friction model: Coefficient C1 */
+#define ACP10PAR_FFCTRL_FRICTION_C2        1597 /* (REAL) CTRL Feed forward: Friction model: Coefficient C2 */
+#define ACP10PAR_QUICKSTOP_T_JOLT          1618 /* (REAL) Digital inputs: Jolt time for quickstop deceleration ramp [s] */
+#define ACP10PAR_SIM_GEAR_IN_REV           1619 /* (UDINT) Simulation mode: Gearbox input revolutions */
+#define ACP10PAR_SIM_GEAR_OUT_REV          1620 /* (UDINT) Simulation mode: Gearbox output revolutions */
+#define ACP10PAR_SIM_GEAR_DIR              1621 /* (USINT) Simulation mode: Gearbox direction */
 #define ACP10PAR_LOGIC_MODE                3072 /* (UINT) FB LOGIC: Mode */
 #define ACP10PAR_LOGIC_IN1_PARID           3080 /* (UINT) FB LOGIC: Parameter ID of input1 */
 #define ACP10PAR_LOGIC_IN2_PARID           3088 /* (UINT) FB LOGIC: Parameter ID of input2 */
@@ -1283,8 +1285,8 @@
 #define ACP10PAR_DIO_OUT14_PARID           5880 /* (UINT) FB DIO: parameter ID of output 14 */
 #define ACP10PAR_DIO_OUT15_PARID           5888 /* (UINT) FB DIO: parameter ID of output 15 */
 #define ACP10PAR_DIO_OUT16_PARID           5896 /* (UINT) FB DIO: parameter ID of output 16 */
-#define ACP10PAR_DIO_CMD_SET_OUT           5904 /* (UINT) FB DIO: command set outputs */
-#define ACP10PAR_DIO_CMD_CLR_OUT           5912 /* (UINT) FB DIO: command clear outputs */
+#define ACP10PAR_DIO_CMD_SET_OUT           5904 /* (UINT) FB DIO: Command set outputs */
+#define ACP10PAR_DIO_CMD_CLR_OUT           5912 /* (UINT) FB DIO: Command clear outputs */
 #define ACP10PAR_DIO_DIR                   5920 /* (UINT) FB DIO: IO configuration */
 #define ACP10PAR_DIO_CNT1                  5928 /* (UDINT) FB DIO: Counter input 1 */
 #define ACP10PAR_DIO_CNT2                  5936 /* (UDINT) FB DIO: Counter input 2 */
@@ -1295,6 +1297,13 @@
 #define ACP10PAR_DIO_IN7_FALL_EDGE_TIME    5976 /* (UDINT) FB DIO: input 7: Time of the falling edge [us] */
 #define ACP10PAR_DIO_IN8_RISE_EDGE_TIME    5984 /* (UDINT) FB DIO: input 8: Time of the rising edge [us] */
 #define ACP10PAR_DIO_IN8_FALL_EDGE_TIME    5992 /* (UDINT) FB DIO: input 8: Time of the falling edge [us] */
+#define ACP10PAR_DIO_OUT_ENABLED           6000 /* (UDINT) FB DIO: Read output configuration */
+#define ACP10PAR_DIO_CMD_SET_OUT_ENABLE    6008 /* (UDINT) FB DIO: Command set output configuration */
+#define ACP10PAR_DIO_CMD_CLR_OUT_ENABLE    6016 /* (UDINT) FB DIO: Command clear output configuration */
+#define ACP10PAR_DIO_IN_ENABLED            6024 /* (UDINT) FB DIO: Read input configuration */
+#define ACP10PAR_DIO_CMD_SET_IN_ENABLE     6032 /* (UDINT) FB DIO: Command set input configuration */
+#define ACP10PAR_DIO_CMD_CLR_IN_ENABLE     6040 /* (UDINT) FB DIO: Command clear input configuration */
+#define ACP10PAR_DIO_OUT_FB                6048 /* (UINT) FB DIO: output feedback */
 #define ACP10PAR_AIO_IN1                   6144 /* (INT) FB AIO: channel 1: Analog value */
 #define ACP10PAR_AIO_IN2                   6152 /* (INT) FB AIO: channel 2: Analog value */
 #define ACP10PAR_AIO_CMP1_THRESH_PARID     6160 /* (UINT) FB AIO: channel 1: Comparator threshold pointer parameter */
@@ -1316,6 +1325,17 @@
 #define ACP10PAR_AIO_IN2_FILTER            6288 /* (REAL) FB AIO: channel 2: Filter [s] */
 #define ACP10PAR_AIO_IN3                   6296 /* (INT) FB AIO: channel 3: Analog value */
 #define ACP10PAR_AIO_IN4                   6304 /* (INT) FB AIO: channel 4: Analog value */
+#define ACP10PAR_AIO_OUT_ENABLED           6312 /* (UDINT) FB AIO: Read output configuration */
+#define ACP10PAR_AIO_CMD_SET_OUT_ENABLE    6320 /* (UDINT) FB AIO: Command set output configuration */
+#define ACP10PAR_AIO_CMD_CLR_OUT_ENABLE    6328 /* (UDINT) FB AIO: Command clear output configuration */
+#define ACP10PAR_AIO_IN_ENABLED            6336 /* (UDINT) FB AIO: Read input configuration */
+#define ACP10PAR_AIO_CMD_SET_IN_ENABLE     6344 /* (UDINT) FB AIO: Command set input configuration */
+#define ACP10PAR_AIO_CMD_CLR_IN_ENABLE     6352 /* (UDINT) FB AIO: Command clear input configuration */
+#define ACP10PAR_AIO_IDX                   6360 /* (USINT) FB AIO: Index of the current analog IO */
+#define ACP10PAR_AIO_OUT_PARID             6368 /* (UINT) FB AIO: parameter ID of output (Index) */
+#define ACP10PAR_AIO_OUT_MODE              6376 /* (UDINT) FB AIO: output mode */
+#define ACP10PAR_AIO_CMD                   6384 /* (UDINT) FB AIO: IO-Kommando */
+#define ACP10PAR_AIO_CHK                   6392 /* (UDINT) FB AIO: Checks */
 #define ACP10PAR_CMP_IN_PARID              6656 /* (UINT) FB CMP: parameter ID of input */
 #define ACP10PAR_CMP_THRESHOLD             6664 /* (REAL) FB CMP: threshold */
 #define ACP10PAR_CMP_WINDOW                6672 /* (REAL) FB CMP: window */

@@ -45,9 +45,11 @@
        Info(UINT): Mindestversion
    73: Ungültiges R4 Fließkomma-Format
    74: Parameter kann nur über Kanal 1 (Achse 1) geschrieben werden
+   75: Parameter kann bei gewähltem Motortyp nicht geschrieben werden
  1001: Fehler-FIFO Überlauf
  1002: Parameter nicht im gültigen Wertebereich
  1003: Parameter schreiben bei aktiver Regelung nicht erlaubt
+ 1004: Timeout bei Netzwerk-Lebensüberwachung
  1005: Parameter schreiben bei aktiver Bewegung nicht erlaubt
  1006: Ungültiger Parameter für Trigger-Ereignis (Digital-Eingang + Flanke)
  1008: Master für Netzwerk-Kopplung deaktiviert - Geberfehler
@@ -76,6 +78,7 @@
  1031: Lageregler Zykluszeit überschritten - CPU Auslastung zu hoch
  1032: Internal bus error
        Info(UDINT): Error code
+ 1034: Wert des Parameters in Verbindung mit Motorgebergetriebe nicht erlaubt
  2001: Upload der Trace-Daten nicht erlaubt: Aufzeichnung aktiv 
  2003: Trace-Start nicht erlaubt: Aufzeichnung aktiv
  2006: Initialisierung der Trace-Parameter nicht erlaubt: Aufzeichnung aktiv
@@ -223,78 +226,73 @@
        Info(UINT): Fehlerstatus
  6074: 24 VDC Versorgung: Überspannung
        Info(REAL): Grenzwert
+ 6075: Initialisierung der Lastsimulation fehlgeschlagen
  7012: Geber: Hiperface Error Bit
-       Info(USINT): Slot
+       Info(USINT): Geber
  7013: Geber: Statusmeldung
        Info(UDINT): Statuscode
  7014: Geber: CRC Fehler beim Parameter übertragen
-       Info(USINT): Slot
+       Info(USINT): Geber
  7015: Geber: Timeout Fehler beim Parameter übertragen
-       Info(USINT): Slot
- 7016: Geber: Busy Fehler beim Parameter übertragen
-       Info(USINT): Slot
+       Info(USINT): Geber
  7017: Geber: Fehler beim Lesen der Geber-Parameter
-       Info(USINT): Slot
- 7020: OEM-Daten: Fehler bei Daten schreiben
-       Info(USINT): Slot
- 7021: Geber: Timeout Fehler beim Lesen der Absolutposition
-       Info(USINT): Slot
+       Info(USINT): Geber
  7022: Geber: Initialisierung ist aktiv
-       Info(USINT): Slot
+       Info(USINT): Geber
  7023: Geber: Parametertransfer ist aktiv
-       Info(USINT): Slot
+       Info(USINT): Geber
  7029: Geber: Inkremental-Signalamplitude zu klein
-       Info(USINT): Slot
+       Info(USINT): Geber
  7030: Geber: Inkremental-Signalamplitude zu groß
-       Info(USINT): Slot
+       Info(USINT): Geber
  7031: Geber: Inkremental-Signalamplitude zu groß (Störungen)
-       Info(USINT): Slot
+       Info(USINT): Geber
  7032: Geber: Inkremental-Signalamplitude zu klein (Störungen, keine Verbindung)
-       Info(USINT): Slot
+       Info(USINT): Geber
  7033: Geber: Inkremental-Positonssprung zu groß
-       Info(USINT): Slot
+       Info(USINT): Geber
  7036: Geber: Einsteckkarte-ID ungültig (Steckverbindung und EEPROM-Daten prüfen)
-       Info(USINT): Slot
+       Info(USINT): Geber
  7038: Geber: Position nicht synchron mit Absolutwert
-       Info(USINT): Slot
+       Info(USINT): Geber
  7039: Inkremental-Geber: Leitungsstörung Spur A
-       Info(USINT): Slot
+       Info(USINT): Geber
  7040: Inkremental-Geber: Leitungsstörung Spur B
-       Info(USINT): Slot
+       Info(USINT): Geber
  7041: Inkremental-Geber: Leitungsstörung Spur R
-       Info(USINT): Slot
+       Info(USINT): Geber
  7042: Inkremental-Geber: Flankenabstand des Quadratursignals zu klein
-       Info(USINT): Slot
+       Info(USINT): Geber
  7043: Geber: Leitungsstörung Spur D
-       Info(USINT): Slot
+       Info(USINT): Geber
  7044: Geber: Parity
-       Info(USINT): Slot
+       Info(USINT): Geber
  7045: Resolver: Signalstörung (Plausibilitätsprüfung)
-       Info(USINT): Slot
+       Info(USINT): Geber
  7046: Resolver: Leitungsstörung
-       Info(USINT): Slot
+       Info(USINT): Geber
  7047: Ungültiger Abstand der Referenzmarken
        Info(DINT): Abstand
  7048: Fehler beim Lesen des Geberspeichers
-       Info(USINT): Slot
+       Info(USINT): Geber
  7049: Geberstromaufnahme anormal
-       Info(USINT): Slot
+       Info(USINT): Geber
  7050: Inkremental-Geber: AB-Signaländerung nicht zulässig
-       Info(USINT): Slot
+       Info(USINT): Geber
  7051: Geber: Beschleunigung zu groß (Störung)
-       Info(USINT): Slot
+       Info(USINT): Geber
  7052: Geber: Geber wird nicht unterstützt
-       Info(USINT): Slot
+       Info(USINT): Geber
  7053: Geber: Fehler in der Spannungsversorgung
-       Info(USINT): Slot
+       Info(USINT): Geber
  7054: Geber: Position im Kanal bereits definiert
-       Info(USINT): Slot
+       Info(USINT): Geber
  7055: Geber: Ungueltiger Inhalttyp 'Frameende'
-       Info(USINT): Slot
+       Info(USINT): Geber
  7057: Geber: Register Lese/Schreibzugriff nicht erlaubt/implementiert
-       Info(USINT): Slot
+       Info(USINT): Geber
  7058: Geber: Alarmbit ist gesetzt
-       Info(USINT): Slot
+       Info(USINT): Geber
  7059: Virtueller Geber: Fehlerstatus
        Info(UDINT): PARID_ENCOD0_STATUS
  7060: Virtueller Geber: Überblendfehler
@@ -302,45 +300,49 @@
  7061: Virtueller Geber: Stillstandsüberwachung
        Info(UDINT): PARID_ENCOD0_STATUS
  7062: Geber: SMC Modul nicht bereit
-       Info(USINT): Slot
+       Info(USINT): Geber
  7063: Geber: Fehler in der UART Kommunikation
-       Info(USINT): Slot
+       Info(USINT): Geber
  7064: Geber: Fehler in der SMC Kommunikation
-       Info(USINT): Slot
+       Info(USINT): Geber
  7065: Geber: Gebertyp ungültig
-       Info(USINT): Slot
+       Info(USINT): Geber
  7066: Geber: Geber nicht bereit
-       Info(USINT): Slot
+       Info(USINT): Geber
  7067: EnDat-Geber: SMC Modul nicht im Zustand Operational
-       Info(USINT): Slot
+       Info(USINT): Geber
  7068: Geber: Maximale Zykluszeit überschritten
-       Info(USINT): Slot
+       Info(USINT): Geber
  7069: Geber: Geberfehlerfilter aktiv
-       Info(USINT): Slot
+       Info(USINT): Geber
  7070: Geber: Limit Schleppfehler überschritten
        Info(REAL): Aktueller Schleppfehler
  7071: Geber: Limit Geschwindigkeitsfehler überschritten
        Info(REAL): Geschwindigkeitsfehler
  7072: Geber: Übertragungszeit für Position überschritten
-       Info(USINT): Slot
+       Info(USINT): Geber
  7073: Geber: Multiturnfehler
-       Info(USINT): Slot
+       Info(USINT): Geber
  7074: Geber: SafeMOTION Fehler
-       Info(USINT): Slot
+       Info(USINT): Geber
  7075: Geber: Konfiguration Gebertyp fehlerhaft
-       Info(USINT): Slot
+       Info(USINT): Geber
  7076: Geber: Datenübertragung aktiv
        Info(UINT): Motor: Datensatz-Index
  7077: Geber: Geberauswertung durch SafeMOTION Konfiguration blockiert
-       Info(USINT): Slot
+       Info(USINT): Geber
  7078: Geber: Intersegmentkommunikation ausgefallen
  7079: Geber: Interner Fehler
        Info(UDINT): -
  7080: Geber: Fehler in der Geberkommunikation
-       Info(USINT): Slot
+       Info(USINT): Geber
+ 7081: Geber: Timeout bei der Initialisierung
+       Info(USINT): Geber
+ 7082: Geber: Verbindung zum Geber gestört
+       Info(USINT): Geber
  7100: Parameterfunktion wird nicht unterstützt. (Einsteckkarte ?)
- 7103: Nicht unterstützte Schnittstelle
-       Info(UDINT): Schnittstelle
+ 7103: Inkompatible Schnittstelle
+       Info(UDINT): Schnittstelle + Zusatzinfo
  7200: Zwischenkreis: Überspannung
  7210: Zwischenkreis: Vorladen: Spannung instabil 
  7211: Zwischenkreis: Spannungseinbruch
@@ -371,8 +373,10 @@
        Info(REAL): Spannungsanstiegsverhältnis
  7229: Chopper: Überstrom
  7230: Zwischenkreis: Bereichsverletzung an Messstelle 2 
- 7300: Digital IO: Ungültige IO Konfiguration
-       Info(UINT): Slot
+ 7300: Analog/Digital IO: Ungültige IO Konfiguration
+       Info(USINT): Slot
+ 7303: Analog/Digital IO: 24V-Spannungsversorgung fehlerhaft
+       Info(USINT): Slot
  7401: Parameterposition überschreitet maximale Datenlänge
  7402: Bearbeitung der Parameter-Sequenz abgebrochen: Fehler beim Schreiben
        Info(UINT): Index des Parameters
@@ -492,9 +496,12 @@
  9300: Stromregler: Überstrom
        Info(REAL): Grenzwert
  9302: Stromregler: Zykluszeit ungültig
+ 9303: Einspeiser: Summenstrom: Überstrom
+       Info(REAL): Grenzwert
 10000: Identifikationsparameter unvollständig
 10001: Parameter Identifikation: Kein gültiger Untermodus gewählt
 10100: Parameter Identifikation: Gütekriterium verletzt 
+       Info(UINT): Detail
 10101: Kein ISQ-Filter frei
 10102: Keine Resonanzfrequenz für ISQ-Filter (Bandsperre) gefunden
        Info(UINT): Filter
@@ -713,11 +720,11 @@
        Info(UINT): PLCopen_FB
 31201: Di/Do Interface: Antrieb nicht bereit
 31220: Geberfehler: Geber nicht konfiguriert
-       Info(UINT): EncIf Index
+       Info(USINT): EncIf Index
 31221: Geberfehler: Leitungsstörung oder Signalstörung
-       Info(UINT): EncIf Index
+       Info(USINT): EncIf Index
 31224: Geber Interface: HW Modul nicht OK
-       Info(UINT): EncIf Index
+       Info(USINT): EncIf Index
 31240: Referenzier-Modus mit aktueller Hardware nicht zulässig
 31247: Antriebs Interface: DrvOK wurde vom HW Modul nicht gesetzt
 31248: Trigger Interface: HW Modul nicht OK
@@ -1137,6 +1144,7 @@
        Info(UDINT): Maximale Anzahl
 32330: Setup: Daten eines ACOPOS-Parameters länger als 6 Bytes
        Info(UINT): Parameter-ID
+32396: Die Änderung der Zykluszeit ist für diesen ACOPOS Hardware Typ nicht erlaubt
 32397: NCSYS-Version auf dem Zielsystem ist nicht kompatibel zu NCMAN-Version
 32398: acp10sys enthält kein Betriebssystem für diesen ACOPOS Hardware Typ
 32399: Manueller ACOPOS-Restart (POWER-OFF/-ON) nach NCSYS-Download notwendig
@@ -1279,7 +1287,8 @@
 35010: SMC FS: Interner Fehler, Achsindex ausserhalb des erlaubten Bereichs
        Info(UDINT): Pointer ID
 35011: SMC FS: Interner Fehler, Funkt.-Parameter ausserhalb des erlaubten Bereichs
-       Info(UDINT): 
+       Info(UDINT): Befehlszähler (PC)
+35012: SMC FS: Nicht sicherer Geber angeschlossen
 35016: SMC FS: Interner Fehler, Kreuzkommunikation der Prüfpunkte
        Info(UDINT): Prüfpunkt ID
 35017: SMC FS: Interner Fehler, Kreuzkommunikation des Statusworts
@@ -1424,6 +1433,7 @@
 35127: SMC FS: Interner Fehler, Ungültiger Stromwandleroffset
 35128: SMC FS: Interner Fehler, Sigma delta Wandlung ist nicht plausibel
 35129: SMC FS: Interner Fehler, Gain/Offset korrigierte Stromwerte ungültig
+35130: SMC FS: Interner Fehler, Testfall
 35150: SMC FS: Nachladbare Safety Parameter: Deakt. Funktion Enable Bit gesetzt
        Info(UDINT): Zusatzinfo
 35151: SMC FS: Nachladbare Safety Parameter: Platzhalter Enable Bit gesetzt
@@ -1548,7 +1558,7 @@
        Info(UDINT): Zusatzinfo
 35246: SMC: Geber - Initialisierungsfehler
        Info(UDINT): Zusatzinfo
-35247: SMC: Geber - Debug Information
+35247: SMC: Debug Information
        Info(UDINT): Zusatzinfo
 35248: SMC: Interne Warnung, Lockbit gesetzt
        Info(UDINT): Lockbits
@@ -1564,6 +1574,9 @@
 35254: SMC: Geber - Länge des physikalischen Referenzsystems zu groß
        Info(UDINT): Zusatzinfo
 35255: SMC FS: Geber - Die Beschleunigungsgrenze wurde überschritten
+35502: SMC: UTILS - Testinterface, dummy logbook entry
+35503: SMC FFS: Interner Fehler in der ADC Konvertierung 
+       Info(UDINT): Zusatzinfo
 35504: SMC FFS: RSP - Homing, INT32 Überlauf der S_SafePosition
        Info(UDINT): Zusatzinfo
 35506: SMC FFS: RSP - Homing, Positionsänderung im ausgeschalteten Zustand zu groß
@@ -1603,201 +1616,215 @@
 38005: Motortest: Geschwindigkeit ist während dem Einschalten zu hoch
        Info(REAL): Grenzgeschwindigkeit
 38006: Stromregler: Zulässige Stromoffsetwerte überschritten
-38007: Systemverwaltung: BsLoader aktiv: Jumper gesteckt
-       Info(UINT): BsLoader Version
 38008: Bremswiderstand: Kein Stromfluss
 39001: Geber: Positionskorrektur aktiv
-       Info(USINT): Slot
+       Info(USINT): Geber
 39002: Resolver: Geschwindigkeitsschranke für 14Bit Auflösung überschritten
-       Info(USINT): Slot
+       Info(USINT): Geber
 39003: EnDat-Geber: Alarmbit ist gesetzt
-       Info(USINT): Slot
+       Info(USINT): Geber
 39004: EnDat-Geber: Alarmbit - Ausfall der Beleuchtung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39005: EnDat-Geber: Alarmbit - Signalamplitude zu klein
-       Info(USINT): Slot
+       Info(USINT): Geber
 39006: EnDat-Geber: Alarmbit - Positionswert fehlerhaft
-       Info(USINT): Slot
+       Info(USINT): Geber
 39007: EnDat-Geber: Alarmbit - Überspannung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39008: EnDat-Geber: Alarmbit - Unterspannung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39009: EnDat-Geber: Alarmbit - Überstrom
-       Info(USINT): Slot
+       Info(USINT): Geber
 39010: EnDat-Geber: Alarmbit - Batteriewechsel erforderlich
-       Info(USINT): Slot
+       Info(USINT): Geber
 39011: EnDat-Geber: Warnungsbit - Frequenzüberschreitung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39012: EnDat-Geber: Warnungsbit - Temperaturüberschreitung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39013: EnDat-Geber: Warnungsbit - Regelreserve Beleuchtung erreicht
-       Info(USINT): Slot
+       Info(USINT): Geber
 39014: EnDat-Geber: Warnungsbit - Batterieladung zu gering
-       Info(USINT): Slot
+       Info(USINT): Geber
 39015: EnDat-Geber: Warnungsbit - Referenzpunkt nicht erreicht
-       Info(USINT): Slot
+       Info(USINT): Geber
 39016: Inkrementalgeber-Emulation: Frequenz zu hoch
-       Info(UINT): Slot
+       Info(USINT): Geber
 39017: Geber: CRC Fehler beim Position lesen
-       Info(USINT): Slot
+       Info(USINT): Geber
 39018: Referenzimpuls-Überwachung: Position, Auflösung od. Referenzimpuls fehlerhaft
-       Info(USINT): Slot
+       Info(USINT): Geber
 39019: Serielle Geberschnittstelle: Stopbit Fehler
-       Info(USINT): Slot
+       Info(USINT): Geber
 39020: Serielle Geberschnittstelle: Überlauf der Empfangsdaten
-       Info(USINT): Slot
+       Info(USINT): Geber
 39021: Serielle Geberschnittstelle: Sendedaten Fehler
-       Info(USINT): Slot
+       Info(USINT): Geber
 39022: EnDat-Geber: Warnungsbit ist gesetzt
-       Info(USINT): Slot
+       Info(USINT): Geber
 39023: EnDat-Geber: CRC Fehler bei EnDat2.2 Zusatzinformationen
-       Info(USINT): Slot
+       Info(USINT): Geber
 39024: EnDat-Geber: Betriebszustandsfehlerquellen: M ALL Power down 
-       Info(USINT): Slot
+       Info(USINT): Geber
 39025: EnDat-Geber: Betriebszustandsfehlerquellen: M Overflow / Underflow
-       Info(USINT): Slot
+       Info(USINT): Geber
 39026: EnDat-Geber: Fehler Type 3 bei EnDat2.2 Zusatzinformationen
-       Info(USINT): Slot
+       Info(USINT): Geber
 39027: Geberemulation: 5V-Spannungsversorgung fehlerhaft
-       Info(UINT): Slot
+       Info(USINT): Geber
 39028: Geber: Multiturnfehler
-       Info(USINT): Slot
+       Info(USINT): Geber
 39029: Geber: Batterieladung zu gering
-       Info(USINT): Slot
+       Info(USINT): Geber
 39030: Geber: Warnungsbit ist gesetzt
-       Info(USINT): Slot
+       Info(USINT): Geber
 39032: EnDat-Geber: Betriebszustandsfehlerquellen: Beleuchung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39033: EnDat-Geber: Betriebszustandsfehlerquellen: Signal Amplitude
-       Info(USINT): Slot
+       Info(USINT): Geber
 39034: EnDat-Geber: Betriebszustandsfehlerquellen: S Pos 1
-       Info(USINT): Slot
+       Info(USINT): Geber
 39035: EnDat-Geber: Betriebszustandsfehlerquellen: Überspannung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39036: EnDat-Geber: Betriebszustandsfehlerquellen: Unterspannung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39037: EnDat-Geber: Betriebszustandsfehlerquellen: Überstrom
-       Info(USINT): Slot
+       Info(USINT): Geber
 39038: EnDat-Geber: Betriebszustandsfehlerquellen: Temperaturüberschreitung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39039: EnDat-Geber: Betriebszustandsfehlerquellen: S Pos 2
-       Info(USINT): Slot
+       Info(USINT): Geber
 39040: EnDat-Geber: Betriebszustandsfehlerquellen: S System
-       Info(USINT): Slot
+       Info(USINT): Geber
 39041: EnDat-Geber: Betriebszustandsfehlerquellen: S ALL power down
-       Info(USINT): Slot
+       Info(USINT): Geber
 39042: EnDat-Geber: Betriebszustandsfehlerquellen: M Pos 1
-       Info(USINT): Slot
+       Info(USINT): Geber
 39043: EnDat-Geber: Betriebszustandsfehlerquellen: M Pos 2
-       Info(USINT): Slot
+       Info(USINT): Geber
 39044: EnDat-Geber: Betriebszustandsfehlerquellen: M System
-       Info(USINT): Slot
+       Info(USINT): Geber
 39045: EnDat-Geber: Betriebszustandsfehlerquellen: M Batterie
-       Info(USINT): Slot
+       Info(USINT): Geber
 39046: Geber: Fehlerhafte Geberadressquittierung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39047: Geber: Position nicht synchron mit Absolutwert
-       Info(USINT): Slot
+       Info(USINT): Geber
 39048: Geber: Fehlerhafte Befehlscodequittierung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39049: Geber: Timeout beim Parameter übertragen
-       Info(USINT): Slot
+       Info(USINT): Geber
 39050: Geber: Parity
-       Info(USINT): Slot
+       Info(USINT): Geber
 39051: Geber: Hiperface Error Bit
-       Info(USINT): Slot
+       Info(USINT): Geber
 39052: Geber: Messbereich überschritten
-       Info(USINT): Slot
+       Info(USINT): Geber
 39053: Geber: Interne Überprüfung der Geberschnittstelle fehlgeschlagen
-       Info(USINT): Slot
+       Info(USINT): Geber
 39054: Geber: Ungültige Versorgungspannung
-       Info(USINT): Slot
+       Info(USINT): Geber
 39055: Geber: Inkremental-Signalamplitude zu klein
-       Info(USINT): Slot
+       Info(USINT): Geber
 39056: Geber: Inkremental-Signalamplitude zu groß
-       Info(USINT): Slot
+       Info(USINT): Geber
 39059: Geber: Statusmeldung
        Info(UDINT): Statuscode
 39060: Geber: Sync-Bit Fehler
-       Info(USINT): Slot
+       Info(USINT): Geber
 39061: Geber: UART Übertragungsfehler 
+       Info(USINT): Geber
+39301: Analog/Digital IO: 24V-Spannungsversorgung fehlerhaft
        Info(USINT): Slot
-39301: Digital IO: 24V-Spannungsversorgung fehlerhaft
-       Info(UINT): Slot
 39302: Digital IO 1-4: Diagnosebit aktiv (Strom, 24V Versorgung)
-       Info(UINT): Slot
+       Info(USINT): Slot
 39303: Digital IO 5-8: Diagnosebit aktiv (Strom, 24V Versorgung)
-       Info(UINT): Slot
+       Info(USINT): Slot
 39305: Digital IO 10: Diagnosebit aktiv (Strom, Temperatur)
-       Info(UINT): Slot
+       Info(USINT): Slot
 39306: Digital IO 9: Diagnosebit aktiv (Strom, Temperatur)
-       Info(UINT): Slot
+       Info(USINT): Slot
 39307: Digital IO: Ausgänge nach Netzwerkfehler mittels Ausgangsmaske deaktiviert
-       Info(UINT): Slot
+       Info(USINT): Slot
+39308: Analog/Digital IO: Diagnosebit aktiv
+       Info(USINT): Slot
+39309: Digital IO: Diagnosebit aktiv
+       Info(UINT): Digital IOs
+39310: Analog IO: Diagnosebit aktiv
+       Info(UDINT): Zusatzinformation
+39311: Analog IO: Analog Eingang gestört
+       Info(USINT): Slot
+39312: Analog IO: Analogwert zu klein
+       Info(USINT): Analog IO
+39313: Analog IO: Analogwert zu groß
+       Info(USINT): Analog IO
+39314: Analog IO: Drahtbruch oder Analogwert unterhalb des Messbereichs
+       Info(USINT): Analog IO
+39315: Analog IO: Drahtbruch oder Analogwert oberhalb des Messbereichs
+       Info(USINT): Analog IO
 39500: Geber: HIPERFACE: Status: Abgleichdaten fehlerhaft (01h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39501: Geber: HIPERFACE: Status: Sensor nicht eingestellt oder gerade dabei (20h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39502: Geber: HIPERFACE: Status: Abstand Maßstab/Sensor zu hoch (21h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39504: Geber: HIPERFACE: Status: Linear Positionsfehler (23h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39510: Geber: HIPERFACE: Status: Der Geber hat keinen Fehler erkannt (00h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39511: Geber: HIPERFACE: Status: Analogsignale außerhalb Spezifikation (01h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39512: Geber: HIPERFACE: Status: Fehlerhafter Interner Winkeloffset (02h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39513: Geber: HIPERFACE: Status: Datenfeld Partitionstabelle zerstört (03h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39514: Geber: HIPERFACE: Status: Analoge Grenzwerte nicht verfügbar (04h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39515: Geber: HIPERFACE: Status: Interner I²C-Bus nicht funktionsfähig (05h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39516: Geber: HIPERFACE: Status: Interner Checksummenfehler (06h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39517: Geber: HIPERFACE: Status: Programmüberwachungs-Fehler (07h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39518: Geber: HIPERFACE: Status: Überlauf des Zählers (08h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39519: Geber: HIPERFACE: Status: Parityfehler (09h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39520: Geber: HIPERFACE: Status: Checksummenfehler (0Ah)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39521: Geber: HIPERFACE: Status: Unbekannter Befehl (0Bh)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39522: Geber: HIPERFACE: Status: Falsche Befehlslänge (0Ch)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39523: Geber: HIPERFACE: Status: Falscher Befehlsargument (0Dh)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39524: Geber: HIPERFACE: Status: Schreibgeschütztes Datenfeld (0Eh)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39525: Geber: HIPERFACE: Status: Falscher Zugriffscode (0Fh)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39526: Geber: HIPERFACE: Status: Ungenügend-Speicher-Fehler (10h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39527: Geber: HIPERFACE: Status: Falscher Datenfeld Offset (11h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39528: Geber: HIPERFACE: Status: Falsche Datenfeldnummer (12h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39538: Geber: HIPERFACE: Status: Betragsüberwachung Analogsignale (1Ch)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39539: Geber: HIPERFACE: Status: Senderstrom kritisch (1Dh)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39540: Geber: HIPERFACE: Status: Gebertemperatur kritisch (1Eh)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39541: Geber: HIPERFACE: Status: Drehzahl zu hoch (1Fh)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39542: Geber: HIPERFACE: Status: Singleturn Position unzuverlässig (20h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39543: Geber: HIPERFACE: Status: Multiturn Amplitudenfehler (21h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39544: Geber: HIPERFACE: Status: Multiturn Synchronisierungsfehler (22h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39545: Geber: HIPERFACE: Status: Multiturn Zeigerlängenfehler (23h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 39546: Geber: HIPERFACE: Status: Multiturn Zählerfehler (24h)
-       Info(USINT): Slot
+       Info(USINT): Geber
 41001: Kühler-Temperatursensor: Warngrenze überschritten
        Info(REAL): Kühlertemperatur
 41002: Kühler-Temperatursensor: Nicht angeschlossen oder zerstört
@@ -1863,4 +1890,8 @@
 64011: Timeout für Abschluss der Geber-Initialisierung
 64012: acp10sys enthält kein Betriebssystem für diesen ACOPOS Hardware Typ
 64013: Die Basis-Initialisierung wurde wegen eines Fehlers abgebrochen
+64014: Kein ganzzahliges Zykluszeitverhältnis von NetCyc und POWERLINK
+       Info(UDINT): NetCyc Zykluszeit [us]
+64015: Kein ganzzahliges Zykluszeitverhältnis von NetCyc und POWERLINK "multiplexed"
+       Info(UDINT): NetCyc Zykluszeit [us]
 65535: Response-Fehler

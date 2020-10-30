@@ -78,8 +78,8 @@ TYPE
 		ShiftMode : UINT; (*definition of how the value on the "Shift" input should be used*)
 	END_STRUCT;
 	MC_ADV_MPDC_REF : 	STRUCT  (*structure for using additional functions*)
-		DataObjectNamePos : STRING[12]; (*data object name for positive direction coompensation*)
-		DataObjectNameNeg : STRING[12]; (*data object name for negative direction coompensation*)
+		DataObjectNamePos : STRING[12]; (*data object name for positive direction compensation*)
+		DataObjectNameNeg : STRING[12]; (*data object name for negative direction compensation*)
 		CamStartPosition : REAL; (*axis position the cams start at*)
 		CalcOnly : BOOL; (*only perform calculation, no download or start*)
 	END_STRUCT;
@@ -126,7 +126,7 @@ TYPE
 		CamProfileIndex : UINT; (*index of camprofile used in state*)
 		MasterFactor : DINT; (*multiplication factor of the cam on the master axis*)
 		SlaveFactor : DINT; (*multiplication factor of the cam on the slave axis*)
-		CompMode : USINT; (*compansation mode*)
+		CompMode : USINT; (*compensation mode*)
 		MasterCompDistance : REAL; (*compensation distance of master axis*)
 		SlaveCompDistance : REAL; (*compensation distance of slave axis*)
 		RepeatCounterInit : UINT; (*start value state repeats for the ncCOUNT event*)
@@ -185,10 +185,11 @@ TYPE
 		MinWidth : REAL; (*minimum trigger event width for the event to be considered valid*)
 		MaxWidth : REAL; (*maximum trigger event width for the event to be considered valid*)
 		SensorDelay : DINT; (*trigger sensor delay [µs]*)
+		DisableWidthEvaluationAtStart : BOOL; (*no width evaluation at start if trigger is set*)
 	END_STRUCT;
 	MC_CALC_CAM_CONFIG_REF : 	STRUCT  (*structure for configuring additional options for the interpolation*)
 		Mode : UINT; (*interpolation mode*)
-		CamType : BOOL; (*cyclic or noncyclic cam*)
+		CamType : BOOL; (*cyclic or non-cyclic cam*)
 		NumberOfPolynomials : USINT; (*maximum number of polynomials being calculated*)
 		MasterPeriod : DINT; (*master period*)
 		StartSlope : REAL; (*start slope (velocity) of the cam*)
@@ -234,7 +235,7 @@ TYPE
 	END_STRUCT;
 	MC_DATOBJ_REF : 	STRUCT  (*structure with parameters for saving trace data*)
 		Name : STRING[32]; (*name of the data object or file*)
-		Type : UINT; (*specifiy if a data object or a file is saved*)
+		Type : UINT; (*specify if a data object or a file is saved*)
 		Format : UINT; (*specify the format of the saved data*)
 		Device : STRING[32]; (*name of the file device*)
 	END_STRUCT;
@@ -275,7 +276,7 @@ TYPE
 		Type : USINT; (*type of the currently displayed error *)
 	END_STRUCT;
 	MC_ERRORTEXTCONFIG_REF : 	STRUCT  (*structure with function block configuration*)
-		Format : UINT; (*format of the errortext*)
+		Format : UINT; (*format of the error text*)
 		LineLength : UINT; (*length of a line in the error text string*)
 		DataLength : UINT; (*length of the error text string*)
 		DataAddress : UDINT; (*address of the error text string*)
@@ -299,8 +300,9 @@ TYPE
         Deceleration : REAL; (*maximum deceleration*)
         SetValueParID : UINT; (*read the set value from this ParID instead of the set value input*)
         AdditiveParID : UINT; (*add the value of this ParID to the set value*)
-        DisableJoltTime : BOOL; (*disable jolt limitation on the drive*)
+        DisableJoltTime : BOOL; (*disable jolt limitation on the drive during set values*)
         CoordinatedMovement : BOOL; (*set axis state to Synchronized Motion*)
+        DisableJoltTimeAtEnd : BOOL; (*disable jolt limitation on the drive when Enable is reset*)
 	END_STRUCT;
 	MC_NETTRACE_REF : 	STRUCT  (*structure with parameters for network command trace configuration*)
 		Type : UDINT; (*trace type*)
@@ -332,7 +334,7 @@ TYPE
 		Parameter : ARRAY[0..99] OF MC_TRACEPARAM_REF; (*parameters to record*)
 	END_STRUCT;
 	MC_PARTRACECONFIG_REF : STRUCT  (*structure with function block configuration*)
-		DatObj : MC_DATOBJ_REF; (*parameters for saving the network trace data*)
+		DatObj : MC_DATOBJ_REF; (*parameters for saving the axis trace data*)
 		ParTrace : MC_PARTRACE_REF; (*parameters for axis trace configuration*)
 	END_STRUCT;
 	MC_MPDC_COMP_DATA_REF : STRUCT (*data for compensation*)
@@ -372,7 +374,7 @@ TYPE
 		x : REAL; (*master end position of the polynomial*)
 		Reserve : UDINT; (*internal variable*)
 	END_STRUCT;
-	MC_POWERDATA_REF : 	STRUCT  (*structure for the determined datas of the powermeter function*)
+	MC_POWERDATA_REF : 	STRUCT  (*structure for the determined data of the powermeter function*)
 		IntervalNumber : UDINT; (*number of evaluated intervals*)
 		IntervalDuration : DINT; (*ItervalTime of the last interval*)
 		AverageActivePower : REAL; (*average effective Power*)
@@ -421,10 +423,10 @@ TYPE
 		Mode : UINT; (*mode for the controller setup*)
 		Orientation : USINT; (*orientation for the controller setup*)
 		OperatingPoint : USINT; (*selection of the operating point for the controller setup*)
-		MaxCurrentPercent : REAL; (*percentage of the rated current which is used durring Setup [%]*)
+		MaxCurrentPercent : REAL; (*percentage of the rated current which is used during Setup [%]*)
 		MaxSpeedPercent : REAL; (*maximum speed of the movement in reference to the limits [%]*)
-		MaxDistance : REAL; (*maximum distance which is moved durring the setup*)
-		MaxLagError : REAL; (*maximum lag error which can occure durring the setup*)
+		MaxDistance : REAL; (*maximum distance which is moved during the setup*)
+		MaxLagError : REAL; (*maximum lag error which can occur during the setup*)
 		PropAmplificationPercent : REAL; (*percentage for proportional amplification [%]*)
 		SignalOrder : UDINT; (*order of excitation signal*)
         MaxPropAmplification : REAL; (*maximum proportional amplification [Asec] for mcSPEED, [1/sec] for mcPOSITION*)
@@ -438,9 +440,9 @@ TYPE
 		DatObj : MC_DATOBJ_REF; (*parameters for saving the setup data*)
 		SetupInductionMotorPar : MC_SETUP_IND_MOTOR_PAR_REF; (*parameters for executing the motor setup*)
 	END_STRUCT;
-	MC_SETUP_IND_MOTOR_PAR_OPT_REF : 	STRUCT  (*this parameters are only transered if they are not 0*)
+	MC_SETUP_IND_MOTOR_PAR_OPT_REF : 	STRUCT  (*this parameters are only transferred if they are not 0*)
 		Phase : USINT; (*motor phase (1,2,3)*)
-		PolePairs : USINT; (*numbers of polepairs*)
+		PolePairs : USINT; (*numbers of pole pairs*)
 		VoltageConstant : REAL; (*voltage constant [mVmin]*)
 		MaxSpeed : REAL; (*maximal numbers of revolutions [1/min]*)
 		StallTorque : REAL; (*standstill torque [Nm]*)
@@ -459,10 +461,10 @@ TYPE
 		RatedVoltage : REAL; (*rated voltage [V]*)
 		RatedCurrent : REAL; (*rated current [A]*)
 		RatedSpeed : REAL; (*rated numbers of revolutions [1/min]*)
-		RatedFrequency : REAL; (*rated frequenzy [Hz]*)
+		RatedFrequency : REAL; (*rated frequency [Hz]*)
 		PowerFactor : REAL; (*cos phi*)
 		ThermalTrippingTime : REAL; (*tripping time at thermal overload [s]*)
-		OptionalData : MC_SETUP_IND_MOTOR_PAR_OPT_REF; (*optional parameters for the motorsetup*)
+		OptionalData : MC_SETUP_IND_MOTOR_PAR_OPT_REF; (*optional parameters for the motor setup*)
 	END_STRUCT;
 	MC_SETUP_ISQ_RIPPLE_CFG_REF : 	STRUCT  (*structure with the configuration parameters*)
 		DatObj : MC_DATOBJ_REF; (*parameters for saving the setup data*)
@@ -475,15 +477,15 @@ TYPE
 		Velocity : REAL;
 	END_STRUCT;
 	MC_SETUP_MOTOR_PHA_CFG_REF : 	STRUCT  (*structure with configuration parameters*)
-		DatObj : MC_DATOBJ_REF; (*parmeters for saving the setup data*)
-		SetupMotorPhasingPar : MC_SETUP_MOTOR_PHA_PAR_REF; (*parmeters for executing the phasing setup*)
+		DatObj : MC_DATOBJ_REF; (*parameters for saving the setup data*)
+		SetupMotorPhasingPar : MC_SETUP_MOTOR_PHA_PAR_REF; (*parameters for executing the phasing setup*)
 	END_STRUCT;
 	MC_SETUP_MOTOR_PHA_PAR_REF : 	STRUCT  (*structure with parameters for the setup*)
 		Mode : UINT; (*mode for the phasing setup*)
 		Current : REAL; (*phasing current [A]*)
 		Time : REAL; (*phasing time [s]*)
 	END_STRUCT;
-	MC_SETUP_OUTPUT_REF : 	STRUCT  (*structure where the output datas are written on*)
+	MC_SETUP_OUTPUT_REF : 	STRUCT  (*structure where the output data are written on*)
 		Quality : REAL; (*quality  of the executed setup*)
 		DataObjectIdent : UDINT; (*ident of the saved data object*)
 	END_STRUCT;
@@ -512,7 +514,7 @@ TYPE
 		RatedCurrent : REAL; (*rated current [A]*)
 		RatedSpeed : REAL; (*rated numbers of revolutions [1/min]*)
 		RatedTorque : REAL; (*rated torque [Nm]*)
-		PolePairs : USINT; (*number of polepairs*)
+		PolePairs : USINT; (*number of pole pairs*)
 		PeakCurrent : REAL; (*maximal current [A]*)
 		PeakTorque : REAL; (*maximal torque [Nm]*)
 		ThermalTrippingTime : REAL; (*tripping time at thermal overload [s]*)
@@ -1535,7 +1537,7 @@ TYPE
 		Busy : BOOL; (*internal variable*)
 		CommandAborted : BOOL; (*internal variable*)
 		Error : BOOL; (*internal variable*)
-		Jogging : BOOL; (*internal varibale*)
+		Jogging : BOOL; (*internal variable*)
 		ErrorID : UINT; (*internal variable*)
 		LimitReached : BOOL; (*internal variable*)
 		Direction : USINT; (*internal variable*)
