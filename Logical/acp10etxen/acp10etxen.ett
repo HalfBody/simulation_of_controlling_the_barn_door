@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.2.10.53 SP?>
-<ErrorTextTable Version="3.16.2" NcSwId="Acp10" Language="en">
+<?AutomationStudio Version=4.5.2.102?>
+<ErrorTextTable Version="5.2.1" NcSwId="Acp10" Language="en">
   <Group ID="ErrorTextTable">
     <Group ID="ErrorText">
       <Parameter ID="ErrNr1" />
@@ -64,9 +64,11 @@
       </Group>
       <Parameter ID="ErrNr73" />
       <Parameter ID="ErrNr74" />
+      <Parameter ID="ErrNr75" />
       <Parameter ID="ErrNr1001" />
       <Parameter ID="ErrNr1002" />
       <Parameter ID="ErrNr1003" />
+      <Parameter ID="ErrNr1004" />
       <Parameter ID="ErrNr1005" />
       <Parameter ID="ErrNr1006" />
       <Group ID="ErrNr1008">
@@ -100,6 +102,7 @@
       <Group ID="ErrNr1032">
         <Parameter ID="UDINT" />
       </Group>
+      <Parameter ID="ErrNr1034" />
       <Parameter ID="ErrNr2001" />
       <Parameter ID="ErrNr2003" />
       <Parameter ID="ErrNr2006" />
@@ -280,6 +283,7 @@
       <Group ID="ErrNr6074">
         <Parameter ID="REAL" />
       </Group>
+      <Parameter ID="ErrNr6075" />
       <Group ID="ErrNr7012">
         <Parameter ID="USINT" />
       </Group>
@@ -292,16 +296,7 @@
       <Group ID="ErrNr7015">
         <Parameter ID="USINT" />
       </Group>
-      <Group ID="ErrNr7016">
-        <Parameter ID="USINT" />
-      </Group>
       <Group ID="ErrNr7017">
-        <Parameter ID="USINT" />
-      </Group>
-      <Group ID="ErrNr7020">
-        <Parameter ID="USINT" />
-      </Group>
-      <Group ID="ErrNr7021">
         <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr7022">
@@ -452,6 +447,12 @@
       <Group ID="ErrNr7080">
         <Parameter ID="USINT" />
       </Group>
+      <Group ID="ErrNr7081">
+        <Parameter ID="USINT" />
+      </Group>
+      <Group ID="ErrNr7082">
+        <Parameter ID="USINT" />
+      </Group>
       <Parameter ID="ErrNr7100" />
       <Group ID="ErrNr7103">
         <Parameter ID="UDINT" />
@@ -497,7 +498,10 @@
       <Parameter ID="ErrNr7229" />
       <Parameter ID="ErrNr7230" />
       <Group ID="ErrNr7300">
-        <Parameter ID="UINT" />
+        <Parameter ID="USINT" />
+      </Group>
+      <Group ID="ErrNr7303">
+        <Parameter ID="USINT" />
       </Group>
       <Parameter ID="ErrNr7401" />
       <Group ID="ErrNr7402">
@@ -672,9 +676,14 @@
         <Parameter ID="REAL" />
       </Group>
       <Parameter ID="ErrNr9302" />
+      <Group ID="ErrNr9303">
+        <Parameter ID="REAL" />
+      </Group>
       <Parameter ID="ErrNr10000" />
       <Parameter ID="ErrNr10001" />
-      <Parameter ID="ErrNr10100" />
+      <Group ID="ErrNr10100">
+        <Parameter ID="UINT" />
+      </Group>
       <Parameter ID="ErrNr10101" />
       <Group ID="ErrNr10102">
         <Parameter ID="UINT" />
@@ -1000,13 +1009,13 @@
       </Group>
       <Parameter ID="ErrNr31201" />
       <Group ID="ErrNr31220">
-        <Parameter ID="UINT" />
+        <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr31221">
-        <Parameter ID="UINT" />
+        <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr31224">
-        <Parameter ID="UINT" />
+        <Parameter ID="USINT" />
       </Group>
       <Parameter ID="ErrNr31240" />
       <Parameter ID="ErrNr31247" />
@@ -1559,6 +1568,7 @@
       <Group ID="ErrNr32330">
         <Parameter ID="UINT" />
       </Group>
+      <Parameter ID="ErrNr32396" />
       <Parameter ID="ErrNr32397" />
       <Parameter ID="ErrNr32398" />
       <Parameter ID="ErrNr32399" />
@@ -1740,6 +1750,7 @@
       <Group ID="ErrNr35011">
         <Parameter ID="UDINT" />
       </Group>
+      <Parameter ID="ErrNr35012" />
       <Group ID="ErrNr35016">
         <Parameter ID="UDINT" />
       </Group>
@@ -1928,6 +1939,7 @@
       <Parameter ID="ErrNr35127" />
       <Parameter ID="ErrNr35128" />
       <Parameter ID="ErrNr35129" />
+      <Parameter ID="ErrNr35130" />
       <Group ID="ErrNr35150">
         <Parameter ID="UDINT" />
       </Group>
@@ -2111,6 +2123,10 @@
         <Parameter ID="UDINT" />
       </Group>
       <Parameter ID="ErrNr35255" />
+      <Parameter ID="ErrNr35502" />
+      <Group ID="ErrNr35503">
+        <Parameter ID="UDINT" />
+      </Group>
       <Group ID="ErrNr35504">
         <Parameter ID="UDINT" />
       </Group>
@@ -2165,9 +2181,6 @@
         <Parameter ID="REAL" />
       </Group>
       <Parameter ID="ErrNr38006" />
-      <Group ID="ErrNr38007">
-        <Parameter ID="UINT" />
-      </Group>
       <Parameter ID="ErrNr38008" />
       <Group ID="ErrNr39001">
         <Parameter ID="USINT" />
@@ -2215,7 +2228,7 @@
         <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr39016">
-        <Parameter ID="UINT" />
+        <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr39017">
         <Parameter ID="USINT" />
@@ -2248,7 +2261,7 @@
         <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr39027">
-        <Parameter ID="UINT" />
+        <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr39028">
         <Parameter ID="USINT" />
@@ -2344,22 +2357,46 @@
         <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr39301">
-        <Parameter ID="UINT" />
+        <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr39302">
-        <Parameter ID="UINT" />
+        <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr39303">
-        <Parameter ID="UINT" />
+        <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr39305">
-        <Parameter ID="UINT" />
+        <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr39306">
-        <Parameter ID="UINT" />
+        <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr39307">
+        <Parameter ID="USINT" />
+      </Group>
+      <Group ID="ErrNr39308">
+        <Parameter ID="USINT" />
+      </Group>
+      <Group ID="ErrNr39309">
         <Parameter ID="UINT" />
+      </Group>
+      <Group ID="ErrNr39310">
+        <Parameter ID="UDINT" />
+      </Group>
+      <Group ID="ErrNr39311">
+        <Parameter ID="USINT" />
+      </Group>
+      <Group ID="ErrNr39312">
+        <Parameter ID="USINT" />
+      </Group>
+      <Group ID="ErrNr39313">
+        <Parameter ID="USINT" />
+      </Group>
+      <Group ID="ErrNr39314">
+        <Parameter ID="USINT" />
+      </Group>
+      <Group ID="ErrNr39315">
+        <Parameter ID="USINT" />
       </Group>
       <Group ID="ErrNr39500">
         <Parameter ID="USINT" />
@@ -2550,6 +2587,12 @@
       <Parameter ID="ErrNr64011" />
       <Parameter ID="ErrNr64012" />
       <Parameter ID="ErrNr64013" />
+      <Group ID="ErrNr64014">
+        <Parameter ID="UDINT" />
+      </Group>
+      <Group ID="ErrNr64015">
+        <Parameter ID="UDINT" />
+      </Group>
       <Parameter ID="ErrNr65535" />
     </Group>
     <Group ID="ParameterText">
@@ -2837,6 +2880,7 @@
       <Parameter ID="ParID303" />
       <Parameter ID="ParID304" />
       <Parameter ID="ParID305" />
+      <Parameter ID="ParID306" />
       <Parameter ID="ParID307" />
       <Parameter ID="ParID308" />
       <Parameter ID="ParID309" />
@@ -2858,6 +2902,8 @@
       <Parameter ID="ParID326" />
       <Parameter ID="ParID327" />
       <Parameter ID="ParID328" />
+      <Parameter ID="ParID330" />
+      <Parameter ID="ParID331" />
       <Parameter ID="ParID332" />
       <Parameter ID="ParID333" />
       <Parameter ID="ParID334" />
@@ -2880,11 +2926,7 @@
       <Parameter ID="ParID353" />
       <Parameter ID="ParID354" />
       <Parameter ID="ParID355" />
-      <Parameter ID="ParID358" />
       <Parameter ID="ParID359" />
-      <Parameter ID="ParID360" />
-      <Parameter ID="ParID361" />
-      <Parameter ID="ParID362" />
       <Parameter ID="ParID364" />
       <Parameter ID="ParID365" />
       <Parameter ID="ParID366" />
@@ -3130,8 +3172,6 @@
       <Parameter ID="ParID686" />
       <Parameter ID="ParID687" />
       <Parameter ID="ParID688" />
-      <Parameter ID="ParID689" />
-      <Parameter ID="ParID690" />
       <Parameter ID="ParID692" />
       <Parameter ID="ParID693" />
       <Parameter ID="ParID694" />
@@ -3809,6 +3849,7 @@
       <Parameter ID="ParID1390" />
       <Parameter ID="ParID1391" />
       <Parameter ID="ParID1392" />
+      <Parameter ID="ParID1393" />
       <Parameter ID="ParID1396" />
       <Parameter ID="ParID1397" />
       <Parameter ID="ParID1398" />
@@ -3826,6 +3867,7 @@
       <Parameter ID="ParID1410" />
       <Parameter ID="ParID1411" />
       <Parameter ID="ParID1412" />
+      <Parameter ID="ParID1413" />
       <Parameter ID="ParID1414" />
       <Parameter ID="ParID1415" />
       <Parameter ID="ParID1416" />
@@ -3919,6 +3961,8 @@
       <Parameter ID="ParID1504" />
       <Parameter ID="ParID1505" />
       <Parameter ID="ParID1506" />
+      <Parameter ID="ParID1507" />
+      <Parameter ID="ParID1508" />
       <Parameter ID="ParID1509" />
       <Parameter ID="ParID1510" />
       <Parameter ID="ParID1511" />
@@ -3986,9 +4030,47 @@
       <Parameter ID="ParID1578" />
       <Parameter ID="ParID1579" />
       <Parameter ID="ParID1580" />
-      <Parameter ID="ParID1581" />
       <Parameter ID="ParID1582" />
       <Parameter ID="ParID1583" />
+      <Parameter ID="ParID1584" />
+      <Parameter ID="ParID1586" />
+      <Parameter ID="ParID1587" />
+      <Parameter ID="ParID1588" />
+      <Parameter ID="ParID1589" />
+      <Parameter ID="ParID1590" />
+      <Parameter ID="ParID1591" />
+      <Parameter ID="ParID1592" />
+      <Parameter ID="ParID1593" />
+      <Parameter ID="ParID1594" />
+      <Parameter ID="ParID1595" />
+      <Parameter ID="ParID1596" />
+      <Parameter ID="ParID1597" />
+      <Parameter ID="ParID1600" />
+      <Parameter ID="ParID1601" />
+      <Parameter ID="ParID1602" />
+      <Parameter ID="ParID1603" />
+      <Parameter ID="ParID1604" />
+      <Parameter ID="ParID1605" />
+      <Parameter ID="ParID1606" />
+      <Parameter ID="ParID1607" />
+      <Parameter ID="ParID1608" />
+      <Parameter ID="ParID1609" />
+      <Parameter ID="ParID1610" />
+      <Parameter ID="ParID1611" />
+      <Parameter ID="ParID1612" />
+      <Parameter ID="ParID1613" />
+      <Parameter ID="ParID1614" />
+      <Parameter ID="ParID1615" />
+      <Parameter ID="ParID1616" />
+      <Parameter ID="ParID1617" />
+      <Parameter ID="ParID1618" />
+      <Parameter ID="ParID1619" />
+      <Parameter ID="ParID1620" />
+      <Parameter ID="ParID1621" />
+      <Parameter ID="ParID1622" />
+      <Parameter ID="ParID1623" />
+      <Parameter ID="ParID1624" />
+      <Parameter ID="ParID1625" />
       <Parameter ID="ParID3072" />
       <Parameter ID="ParID3080" />
       <Parameter ID="ParID3088" />
@@ -4089,6 +4171,13 @@
       <Parameter ID="ParID5976" />
       <Parameter ID="ParID5984" />
       <Parameter ID="ParID5992" />
+      <Parameter ID="ParID6000" />
+      <Parameter ID="ParID6008" />
+      <Parameter ID="ParID6016" />
+      <Parameter ID="ParID6024" />
+      <Parameter ID="ParID6032" />
+      <Parameter ID="ParID6040" />
+      <Parameter ID="ParID6048" />
       <Parameter ID="ParID6144" />
       <Parameter ID="ParID6152" />
       <Parameter ID="ParID6160" />
@@ -4110,6 +4199,17 @@
       <Parameter ID="ParID6288" />
       <Parameter ID="ParID6296" />
       <Parameter ID="ParID6304" />
+      <Parameter ID="ParID6312" />
+      <Parameter ID="ParID6320" />
+      <Parameter ID="ParID6328" />
+      <Parameter ID="ParID6336" />
+      <Parameter ID="ParID6344" />
+      <Parameter ID="ParID6352" />
+      <Parameter ID="ParID6360" />
+      <Parameter ID="ParID6368" />
+      <Parameter ID="ParID6376" />
+      <Parameter ID="ParID6384" />
+      <Parameter ID="ParID6392" />
       <Parameter ID="ParID6656" />
       <Parameter ID="ParID6664" />
       <Parameter ID="ParID6672" />
@@ -4571,6 +4671,10 @@
       <Parameter ID="ParID63655" />
       <Parameter ID="ParID63656" />
       <Parameter ID="ParID63657" />
+      <Parameter ID="ParID63660" />
+      <Parameter ID="ParID63663" />
+      <Parameter ID="ParID63664" />
+      <Parameter ID="ParID63672" />
       <Parameter ID="ParID63711" />
       <Parameter ID="ParID63712" />
       <Parameter ID="ParID63713" />
