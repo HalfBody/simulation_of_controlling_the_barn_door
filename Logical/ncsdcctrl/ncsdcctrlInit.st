@@ -5,9 +5,9 @@ PROGRAM _INIT
         
 (* initialize variables *)
         gAxis01_HW.DrvIf_Typ := ncSDC_DRVSERVO16;
-        brsstrcpy( ADR(gAxis01_HW.DrvIf_Name[0]), ADR('gAxis01_DrvIf') );
+        brsstrcpy(ADR(gAxis01_HW.DrvIf_Name[0]), ADR('gAxis01_DrvIf'));
         gAxis01_HW.DiDoIf_Typ := ncSDC_DIDO;
-        brsstrcpy( ADR(gAxis01_HW.DiDoIf_Name[0]), ADR('gAxis01_DiDoIf') );
+        brsstrcpy(ADR(gAxis01_HW.DiDoIf_Name[0]), ADR('gAxis01_DiDoIf'));
          
 (* force variable offset generation *)
         gAxis01.size                      := gAxis01.size;
